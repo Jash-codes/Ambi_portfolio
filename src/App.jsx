@@ -1,25 +1,34 @@
-import Navbar from "./components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Collections from "./components/Collections/Collections";
-import About from "./components/About/About";
-import Gallery from "./components/Gallery/Gallery";
-import Footer from "./components/Footer/Footer";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+
+import Home from "./pages/Home/Home";
+
+import CollectionDetails from "./pages/CollectionDetails/CollectionDetails";
 
 function App() {
+
   return (
-    <>
-      <Navbar />
 
-      <Hero />
+    <BrowserRouter>
 
-      <Collections />
+      <Routes>
 
-      <About />
+        <Route
+          path="/"
+          element={<Home />}
+        />
 
-      <Gallery />
+        <Route
+          path="/collection/:id"
+          element={<CollectionDetails />}
+        />
 
-      <Footer />
-    </>
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 

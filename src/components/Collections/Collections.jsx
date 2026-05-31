@@ -1,40 +1,93 @@
 import "./Collections.css";
 
+import { Link } from "react-router-dom";
+
 function Collections() {
 
   const collections = [
+
     {
-      title:"Sun-Kissed Heritage",
-      image:"https://images.unsplash.com/photo-1583391733981-8498402d2a73?q=80&w=1974"
-    },
-    {
+      id:"royalty",
       title:"Reflections of Royalty",
-      image:"https://images.unsplash.com/photo-1610030469668-4f3f64fef3d1?q=80&w=1974"
+
+      image:"/royal-collection.jpg",
+
+      description:
+      "Handcrafted sarees inspired by regal heritage."
+    },
+
+    {
+      id:"sun-kissed",
+
+      title:"Sun-Kissed Heritage",
+
+      image:"/sun-collection.jpg",
+
+      description:
+      "Elegant weaves touched by golden tradition."
     }
-  ]
+
+  ];
 
   return (
-    <section id="collections" className="collections">
 
-      <h2>Collections</h2>
+    <section
+      id="collections"
+      className="collections"
+    >
+
+      {/* TITLE */}
+
+      <div className="section-header">
+
+        <p>Royal Saree Collections</p>
+
+        <h2>
+          Timeless Heritage
+        </h2>
+
+      </div>
+
+      {/* COLLECTION GRID */}
 
       <div className="collection-grid">
 
-        {collections.map((item,index)=>(
-          <div className="collection-card" key={index}>
+        {
+          collections.map((item,index)=>(
 
-            <img src={item.image} alt="" />
+            <Link
+              to={`/collection/${item.id}`}
+              className="collection-card"
+              key={index}
+            >
 
-            <div className="card-content">
-              <h3>{item.title}</h3>
+              {/* IMAGE */}
 
-              <button>
-                View Gallery
-              </button>
-            </div>
+              <img
+                src={item.image}
+                alt={item.title}
+              />
 
-          </div>
-        ))}
+              {/* OVERLAY */}
+
+              <div className="collection-overlay">
+
+                <h3>{item.title}</h3>
+
+                <p>
+                  {item.description}
+                </p>
+
+                <span>
+                  Explore Collection
+                </span>
+
+              </div>
+
+            </Link>
+
+          ))
+        }
 
       </div>
 
