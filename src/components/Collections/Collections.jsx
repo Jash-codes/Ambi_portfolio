@@ -2,18 +2,21 @@ import "./Collections.css";
 
 import { Link } from "react-router-dom";
 
+import { motion } from "framer-motion";
+
 function Collections() {
 
   const collections = [
 
     {
       id:"royalty",
+
       title:"Reflections of Royalty",
 
-      image:"/royal-collection.jpg",
+      subtitle:
+      "Regal handcrafted silk sarees inspired by timeless palace heritage.",
 
-      description:
-      "Handcrafted sarees inspired by regal heritage."
+      image:"/royal-collection.jpg"
     },
 
     {
@@ -21,10 +24,10 @@ function Collections() {
 
       title:"Sun-Kissed Heritage",
 
-      image:"/sun-collection.jpg",
+      subtitle:
+      "Golden elegance woven with handcrafted sophistication.",
 
-      description:
-      "Elegant weaves touched by golden tradition."
+      image:"/sun-collection.jpg"
     }
 
   ];
@@ -36,55 +39,89 @@ function Collections() {
       className="collections"
     >
 
-      {/* TITLE */}
+      {/* HEADER */}
 
-      <div className="section-header">
+      <motion.div
 
-        <p>Royal Saree Collections</p>
+        className="collections-header"
+
+        initial={{ opacity:0, y:60 }}
+
+        whileInView={{ opacity:1, y:0 }}
+
+        transition={{ duration:1 }}
+
+        viewport={{ once:true }}
+      >
+
+        <p>
+          Luxury Saree Collections
+        </p>
 
         <h2>
-          Timeless Heritage
+          Timeless Royal Elegance
         </h2>
 
-      </div>
+      </motion.div>
 
       {/* COLLECTION GRID */}
 
-      <div className="collection-grid">
+      <div className="collections-grid">
 
         {
           collections.map((item,index)=>(
 
-            <Link
-              to={`/collection/${item.id}`}
+            <motion.div
+
               className="collection-card"
+
               key={index}
+
+              initial={{ opacity:0, y:80 }}
+
+              whileInView={{ opacity:1, y:0 }}
+
+              transition={{ duration:1 }}
+
+              viewport={{ once:true }}
             >
 
               {/* IMAGE */}
 
-              <img
-                src={item.image}
-                alt={item.title}
-              />
+              <div className="collection-image-wrapper">
 
-              {/* OVERLAY */}
+                <div className="image-overlay"></div>
 
-              <div className="collection-overlay">
-
-                <h3>{item.title}</h3>
-
-                <p>
-                  {item.description}
-                </p>
-
-                <span>
-                  Explore Collection
-                </span>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="collection-image"
+                />
 
               </div>
 
-            </Link>
+              {/* CONTENT */}
+
+              <div className="collection-content">
+
+                <h3>
+                  {item.title}
+                </h3>
+
+                <p>
+                  {item.subtitle}
+                </p>
+
+                <Link
+                  to={`/collection/${item.id}`}
+                  className="collection-btn"
+                >
+                  Explore Collection
+                </Link>
+
+              </div>
+
+            </motion.div>
 
           ))
         }

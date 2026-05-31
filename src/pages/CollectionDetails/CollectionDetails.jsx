@@ -1,138 +1,178 @@
 import "./CollectionDetails.css";
 
+import { useParams } from "react-router-dom";
+
+import Navbar from "../../components/Navbar/Navbar";
+
+import Footer from "../../components/Footer/Footer";
+
 import { Link } from "react-router-dom";
 
-import { motion } from "framer-motion";
+function CollectionDetails() {
 
-function Collections() {
+    const { id } = useParams();
 
-  const collections = [
+    /* =========================
+       COLLECTION DATA
+    ========================== */
 
-    {
-      id: "royalty",
+    const collections = {
 
-      title: "Reflections of Royalty",
+        royalty: {
 
-      subtitle:
-      "Regal handcrafted silk sarees inspired by palace heritage.",
+            title: "Reflections of Royalty",
 
-      image: "/royal-collection.jpg",
-    },
+            subtitle:
+                "Regal handcrafted silk sarees inspired by palace heritage.",
 
-    {
-      id: "sun-kissed",
+            sarees: [
 
-      title: "Sun-Kissed Heritage",
+                {
+                    name: "Royal Crimson Silk",
 
-      subtitle:
-      "Golden elegance woven with timeless craftsmanship.",
+                    image: "/saree1.jpg",
 
-      image: "/sun-collection.jpg",
-    }
+                    description:
+                        "Elegant handcrafted silk saree with luxurious zari weaving and royal aesthetics."
+                },
 
-  ];
+                {
+                    name: "Golden Heritage Weave",
 
-  return (
+                    image: "/saree2.jpg",
 
-    <section
-      id="collections"
-      className="collections"
-    >
+                    description:
+                        "Inspired by traditional palace craftsmanship and timeless elegance."
+                }
 
-      {/* LEFT BORDER */}
+            ]
 
-      <div className="royal-strip left"></div>
+        },
 
-      {/* RIGHT BORDER */}
+        "sun-kissed": {
 
-      <div className="royal-strip right"></div>
+            title: "Sun-Kissed Heritage",
 
-      {/* SECTION TITLE */}
+            subtitle:
+                "Golden elegance woven with timeless craftsmanship.",
 
-      <div className="collections-header">
+            sarees: [
 
-        <p>
-          Luxury Saree Archives
-        </p>
+                {
+                    name: "Sunlit Gold Saree",
 
-        <h2>
-          Royal Collections
-        </h2>
+                    image: "/saree3.jpg",
 
-      </div>
+                    description:
+                        "Warm golden tones blended with luxurious handcrafted weaving."
+                },
 
-      {/* COLLECTION SHOWCASE */}
+                {
+                    name: "Amber Glow Silk",
 
-      {
-        collections.map((item,index)=>(
+                    image: "/saree4.jpg",
 
-          <motion.div
+                    description:
+                        "A rich heritage saree inspired by royal Indian artistry."
+                }
 
-            className={`royal-collection ${
-              index % 2 !== 0
-              ?
-              "reverse"
-              :
-              ""
-            }`}
+            ]
 
-            key={index}
+        }
 
-            initial={{ opacity:0, y:80 }}
+    };
 
-            whileInView={{ opacity:1, y:0 }}
+    const collection = collections[id];
 
-            transition={{ duration:1 }}
+    return (
 
-            viewport={{ once:true }}
-          >
+        <>
+            <Navbar />
 
-            {/* IMAGE SIDE */}
+            <section className="collection-details">
 
-            <div className="collection-image-wrapper">
 
-              <div className="image-glow"></div>
+                {/* BORDER STRIPS */}
 
-              <img
-                src={item.image}
-                alt={item.title}
-                className="collection-image"
-              />
+                <div className="royal-border left"></div>
 
-            </div>
+                <div className="royal-border right"></div>
 
-            {/* CONTENT SIDE */}
+                {/* HEADER */}
 
-            <div className="collection-content">
+                <div className="details-header">
 
-              <span className="collection-number">
-                0{index + 1}
-              </span>
+                    <p>
+                        Luxury Saree Collection
+                    </p>
 
-              <h3>
-                {item.title}
-              </h3>
+                    <h1>
+                        {collection.title}
+                    </h1>
 
-              <p>
-                {item.subtitle}
-              </p>
+                    <span>
+                        {collection.subtitle}
+                    </span>
 
-              <Link
-                to={`/collection/${item.id}`}
-                className="collection-btn"
-              >
-                Enter The Gallery
-              </Link>
+                </div>
 
-            </div>
+                {/* SAREES */}
 
-          </motion.div>
+                <div className="saree-grid">
 
-        ))
-      }
+                    {
+                        collection.sarees.map((item, index) => (
 
-    </section>
-  );
+                            <div
+                                className="saree-card"
+                                key={index}
+                            >
+
+                                {/* IMAGE */}
+
+                                <div className="saree-image-wrapper">
+
+                                    <img
+                                        src={item.image}
+                                        alt={item.name}
+                                    />
+
+                                </div>
+
+                                {/* CONTENT */}
+
+                                <div className="saree-content">
+
+                                    <h3>
+                                        {item.name}
+                                    </h3>
+
+                                    <p>
+                                        {item.description}
+                                    </p>
+
+                                    <a
+                                        href="https://wa.me/919999999999"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        Inquire on WhatsApp
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        ))
+                    }
+
+                </div>
+
+            </section>
+
+            <Footer />
+        </>
+    );
 }
 
-export default Collections;
+export default CollectionDetails;

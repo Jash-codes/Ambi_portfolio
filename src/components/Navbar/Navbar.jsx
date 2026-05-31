@@ -1,162 +1,286 @@
 import "./Navbar.css";
+
 import { useState } from "react";
 
 import {
-    HiOutlineMenuAlt3,
-    HiOutlineX
+  HiOutlineMenuAlt3,
+  HiOutlineX
 } from "react-icons/hi";
 
 import { FaWhatsapp } from "react-icons/fa";
 
+import { Link, useLocation } from "react-router-dom";
+
 function Navbar() {
 
-    const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    return (
+  const location = useLocation();
 
-        <nav className="navbar">
+  const isCollectionPage =
+    location.pathname.includes("/collection/");
 
-            {/* LOGO */}
+  return (
 
-            <div className="nav-logo">
+    <nav className="navbar">
 
-                <img
-                    src="/logo.png"
-                    alt="Ambi Logo"
-                />
+      {/* LOGO */}
 
-            </div>
+      <Link
+        to="/"
+        className="nav-logo"
+      >
 
-            {/* DESKTOP NAVIGATION */}
+        <img
+          src="/logo.png"
+          alt="Ambi Logo"
+        />
 
-            <ul className="nav-links">
+      </Link>
 
-                <li>
-                    <a href="#home">Home</a>
-                </li>
+      {/* DESKTOP NAVIGATION */}
 
-                <li>
-                    <a href="#collections">Collections</a>
-                </li>
+      <ul className="nav-links">
 
-                <li>
-                    <a href="#about">About</a>
-                </li>
+        <li>
 
-                <li>
-                    <a href="#gallery">Gallery</a>
-                </li>
+          {
+            isCollectionPage
+              ?
+              <a href="/">
+                Home
+              </a>
+              :
+              <a href="#home">
+                Home
+              </a>
+          }
 
-                <li>
-                    <a href="#footer">Contact</a>
-                </li>
+        </li>
 
-            </ul>
+        <li>
 
-            {/* RIGHT SIDE */}
+          {
+            isCollectionPage
+              ?
+              <a href="/#collections">
+                Collections
+              </a>
+              :
+              <a href="#collections">
+                Collections
+              </a>
+          }
 
-            <div className="nav-right">
+        </li>
 
-                {/* WHATSAPP BUTTON */}
+        <li>
 
-                <a
-                    href="https://wa.me/919999999999"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="whatsapp-btn"
-                >
-                    <FaWhatsapp />
-                    <span>WhatsApp</span>
-                </a>
+          {
+            isCollectionPage
+              ?
+              <a href="/#about">
+                About
+              </a>
+              :
+              <a href="#about">
+                About
+              </a>
+          }
 
-                {/* MOBILE MENU BUTTON */}
+        </li>
 
-                <div
-                    className="menu-btn"
-                    onClick={() => setMenuOpen(!menuOpen)}
-                >
+        <li>
 
-                    {
-                        menuOpen
-                            ?
-                            <HiOutlineX />
-                            :
-                            <HiOutlineMenuAlt3 />
-                    }
+          {
+            isCollectionPage
+              ?
+              <a href="/#gallery">
+                Gallery
+              </a>
+              :
+              <a href="#gallery">
+                Gallery
+              </a>
+          }
 
-                </div>
+        </li>
 
-            </div>
+        <li>
 
-            {/* MOBILE MENU */}
+          {
+            isCollectionPage
+              ?
+              <a href="/#footer">
+                Contact
+              </a>
+              :
+              <a href="#footer">
+                Contact
+              </a>
+          }
 
-            <div className={`mobile-menu ${menuOpen ? "show" : ""}`}>
+        </li>
 
-                <button
-                    className="back-home-btn"
-                    onClick={() => {
-                        window.scrollTo({
-                            top: 0,
-                            behavior: "smooth"
-                        });
+      </ul>
 
-                        setMenuOpen(false);
-                    }}
-                >
-                    ← Back To Home
-                </button>
+      {/* RIGHT SIDE */}
 
-                <a
-                    href="#home"
-                    onClick={() => setMenuOpen(false)}
-                >
-                    Home
-                </a>
+      <div className="nav-right">
 
-                <a
-                    href="#collections"
-                    onClick={() => setMenuOpen(false)}
-                >
-                    Collections
-                </a>
+        {/* WHATSAPP */}
 
-                <a
-                    href="#about"
-                    onClick={() => setMenuOpen(false)}
-                >
-                    About
-                </a>
+        <a
+          href="https://wa.me/919999999999"
+          target="_blank"
+          rel="noreferrer"
+          className="whatsapp-btn"
+        >
 
-                <a
-                    href="#gallery"
-                    onClick={() => setMenuOpen(false)}
-                >
-                    Gallery
-                </a>
+          <FaWhatsapp />
 
-                <a
-                    href="#footer"
-                    onClick={() => setMenuOpen(false)}
-                >
-                    Contact
-                </a>
+          <span>
+            WhatsApp
+          </span>
 
-                {/* MOBILE WHATSAPP */}
+        </a>
 
-                <a
-                    href="https://wa.me/919999999999"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mobile-whatsapp"
-                >
-                    <FaWhatsapp />
-                    Chat on WhatsApp
-                </a>
+        {/* MOBILE MENU BUTTON */}
 
-            </div>
+        <div
+          className="menu-btn"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
 
-        </nav>
-    );
+          {
+            menuOpen
+              ?
+              <HiOutlineX />
+              :
+              <HiOutlineMenuAlt3 />
+          }
+
+        </div>
+
+      </div>
+
+      {/* MOBILE MENU */}
+
+      <div
+        className={`mobile-menu ${
+          menuOpen ? "show" : ""
+        }`}
+      >
+
+        {/* BACK HOME BUTTON */}
+
+        <Link
+          to="/"
+          className="back-home-btn"
+          onClick={() => setMenuOpen(false)}
+        >
+          ← Back To Home
+        </Link>
+
+        {/* MOBILE LINKS */}
+
+        {
+          isCollectionPage
+            ?
+            <>
+              <a
+                href="/"
+                onClick={() => setMenuOpen(false)}
+              >
+                Home
+              </a>
+
+              <a
+                href="/#collections"
+                onClick={() => setMenuOpen(false)}
+              >
+                Collections
+              </a>
+
+              <a
+                href="/#about"
+                onClick={() => setMenuOpen(false)}
+              >
+                About
+              </a>
+
+              <a
+                href="/#gallery"
+                onClick={() => setMenuOpen(false)}
+              >
+                Gallery
+              </a>
+
+              <a
+                href="/#footer"
+                onClick={() => setMenuOpen(false)}
+              >
+                Contact
+              </a>
+            </>
+            :
+            <>
+              <a
+                href="#home"
+                onClick={() => setMenuOpen(false)}
+              >
+                Home
+              </a>
+
+              <a
+                href="#collections"
+                onClick={() => setMenuOpen(false)}
+              >
+                Collections
+              </a>
+
+              <a
+                href="#about"
+                onClick={() => setMenuOpen(false)}
+              >
+                About
+              </a>
+
+              <a
+                href="#gallery"
+                onClick={() => setMenuOpen(false)}
+              >
+                Gallery
+              </a>
+
+              <a
+                href="#footer"
+                onClick={() => setMenuOpen(false)}
+              >
+                Contact
+              </a>
+            </>
+        }
+
+        {/* MOBILE WHATSAPP */}
+
+        <a
+          href="https://wa.me/919999999999"
+          target="_blank"
+          rel="noreferrer"
+          className="mobile-whatsapp"
+        >
+
+          <FaWhatsapp />
+
+          Chat on WhatsApp
+
+        </a>
+
+      </div>
+
+    </nav>
+  );
 }
 
 export default Navbar;

@@ -16,10 +16,14 @@ function App() {
 
       <Routes>
 
+        {/* HOME PAGE */}
+
         <Route
           path="/"
           element={<Home />}
         />
+
+        {/* COLLECTION DETAILS */}
 
         <Route
           path="/collection/:id"
