@@ -1,0 +1,13 @@
+:root {
+
+  --deep-brown: #2b1d1a;
+  --royal-maroon: #5a1e2c;
+  --metallic-gold: #c8a96b;
+  --cream: #f7f1e8;
+  --soft-gold: #e4c590;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+
+  --transition: all 0.4s ease;
+}

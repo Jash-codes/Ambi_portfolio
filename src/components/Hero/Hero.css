@@ -1,0 +1,387 @@
+/* ===== HERO SECTION ===== */
+
+.hero{
+
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.75)
+  ),
+  url("/hero-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+/* ===== OVERLAY ===== */
+
+.hero-overlay{
+
+  position: absolute;
+  inset: 0;
+
+  background:
+  radial-gradient(
+    circle,
+    transparent 20%,
+    rgba(0,0,0,0.75) 100%
+  );
+}
+
+/* ===== GOLD GLOW ===== */
+
+.gold-glow{
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  background:
+  radial-gradient(
+    circle,
+    rgba(200,169,107,0.25),
+    transparent
+  );
+
+  filter: blur(60px);
+
+  animation: glowFloat 8s infinite ease-in-out;
+}
+
+.glow-1{
+
+  width: 320px;
+  height: 320px;
+
+  top: 10%;
+  left: 5%;
+}
+
+.glow-2{
+
+  width: 260px;
+  height: 260px;
+
+  bottom: 10%;
+  right: 5%;
+}
+
+@keyframes glowFloat{
+
+  0%{
+    transform: translateY(0px);
+  }
+
+  50%{
+    transform: translateY(-25px);
+  }
+
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+/* ===== HERO CONTENT ===== */
+
+.hero-content{
+
+  position: relative;
+  z-index: 2;
+
+  max-width: 950px;
+
+  padding: 20px;
+}
+
+/* ===== LOGO ===== */
+
+.hero-logo{
+
+  width: 160px;
+
+  margin-bottom: 25px;
+
+  filter:
+  drop-shadow(0 0 25px rgba(200,169,107,0.45));
+}
+
+/* ===== TAGLINE ===== */
+
+.hero-tagline{
+
+  color: var(--metallic-gold);
+
+  letter-spacing: 6px;
+
+  font-size: 0.9rem;
+
+  margin-bottom: 20px;
+}
+
+/* ===== TITLE ===== */
+
+.hero-content h1{
+
+  font-size: 6rem;
+
+  line-height: 1.1;
+
+  color: white;
+
+  margin-bottom: 25px;
+
+  font-family: var(--font-heading);
+}
+
+.hero-content h1 span{
+
+  color: var(--metallic-gold);
+}
+
+/* ===== QUOTE ===== */
+
+.hero-quote{
+
+  font-size: 1.5rem;
+
+  font-style: italic;
+
+  color: #f5e6cb;
+
+  margin-bottom: 25px;
+
+  letter-spacing: 2px;
+}
+
+/* ===== DESCRIPTION ===== */
+
+.hero-description{
+
+  max-width: 700px;
+
+  margin: auto;
+
+  font-size: 1.1rem;
+
+  line-height: 1.8;
+
+  color: rgba(255,255,255,0.82);
+
+  margin-bottom: 45px;
+}
+
+/* ===== BUTTONS ===== */
+
+.hero-buttons{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+/* ===== EXPLORE BUTTON ===== */
+
+.explore-btn{
+
+  text-decoration: none;
+
+  padding: 16px 38px;
+
+  border-radius: 50px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #d4af6d,
+    #8f6a35
+  );
+
+  color: black;
+
+  font-weight: 600;
+
+  transition: 0.4s ease;
+
+  box-shadow:
+  0 0 25px rgba(200,169,107,0.3);
+}
+
+.explore-btn:hover{
+
+  transform: translateY(-3px);
+
+  box-shadow:
+  0 0 35px rgba(200,169,107,0.45);
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+
+.hero-whatsapp{
+
+  text-decoration: none;
+
+  padding: 16px 34px;
+
+  border-radius: 50px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #25D366,
+    #128C7E
+  );
+
+  color: white;
+
+  font-weight: 600;
+
+  transition: 0.4s ease;
+}
+
+.hero-whatsapp:hover{
+  transform: translateY(-3px);
+}
+
+/* ===== SCROLL INDICATOR ===== */
+
+.scroll-indicator{
+
+  position: absolute;
+
+  bottom: 35px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.scroll-indicator span{
+
+  display: block;
+
+  width: 2px;
+  height: 70px;
+
+  background:
+  linear-gradient(
+    transparent,
+    var(--metallic-gold),
+    transparent
+  );
+
+  animation: scrollAnim 2s infinite;
+}
+
+@keyframes scrollAnim{
+
+  0%{
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  50%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+
+/* ===== TABLET ===== */
+
+@media(max-width:900px){
+
+  .hero-content h1{
+    font-size: 4.2rem;
+  }
+
+  .hero-description{
+    font-size: 1rem;
+  }
+
+  .hero-logo{
+    width: 130px;
+  }
+
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:600px){
+
+  .hero{
+
+    padding: 0 20px;
+
+    background-position: center;
+  }
+
+  .hero-content h1{
+
+    font-size: 2.8rem;
+  }
+
+  .hero-tagline{
+
+    letter-spacing: 4px;
+
+    font-size: 0.75rem;
+  }
+
+  .hero-quote{
+
+    font-size: 1.1rem;
+
+    line-height: 1.7;
+  }
+
+  .hero-description{
+
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+  }
+
+  .hero-logo{
+    width: 105px;
+  }
+
+  .hero-buttons{
+
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .explore-btn,
+  .hero-whatsapp{
+
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .scroll-indicator span{
+    height: 50px;
+  }
+
+}

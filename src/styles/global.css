@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background: var(--deep-brown);
+  color: var(--cream);
+  font-family: var(--font-body);
+  overflow-x:hidden;
+}
+
+section{
+  min-height:100vh;
+  padding:100px 8%;
+}
+
+h1,h2,h3{
+  font-family: var(--font-heading);
+}
+
+.gold-text{
+  color: var(--metallic-gold);
+}
