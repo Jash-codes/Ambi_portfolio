@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 
 import Navbar from "../../components/Navbar/Navbar";
 
-import Footer from "../../components/Footer/Footer";
 
 import { Link } from "react-router-dom";
 
@@ -170,9 +169,14 @@ function CollectionDetails() {
 
             </section>
 
-            <Footer />
         </>
     );
 }
 
 export default CollectionDetails;
+// one pic is good
+
+// are collecctions color based 
+// mam profile
+// collection details
+// saree pics AI 
