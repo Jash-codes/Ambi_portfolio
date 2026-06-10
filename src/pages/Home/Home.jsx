@@ -10,11 +10,15 @@ import Gallery from "../../components/Gallery/Gallery";
 
 import Footer from "../../components/Footer/Footer";
 
+// import RoyalSpark from "../../components/RoyalSpark/RoyalSpark";
+
 function Home() {
 
   return (
 
     <>
+
+      {/* <RoyalSpark /> */}
       <Navbar />
 
       <Hero />

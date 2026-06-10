@@ -27,6 +27,12 @@ function Footer() {
 
         <div className="footer-left">
 
+          <img
+            src="/wappborderframe.png"
+            alt="Royal Frame"
+            className="footer-frame"
+          />
+
           {/* GLOW */}
 
           <div className="footer-left-glow"></div>
