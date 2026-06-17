@@ -1,237 +1,330 @@
-/* ===== SECTION ===== */
+/* ==================================================
+   COLLECTIONS SECTION
+================================================== */
 
 .collections{
 
-  padding:
-  140px 8%;
+  padding:100px 6%;
 
   background:
   linear-gradient(
     180deg,
-    #160c0a,
-    #241715
+    #140909 0%,
+    #1d1111 100%
   );
+
+  position:relative;
+
+  overflow:hidden;
 }
 
-/* ===== HEADER ===== */
+/* ==================================================
+   HEADER
+================================================== */
 
 .collections-header{
 
-  text-align: center;
+  text-align:center;
 
-  margin-bottom: 90px;
+  margin-bottom:80px;
 }
 
 .collections-header p{
 
-  color: var(--metallic-gold);
+  color:#d4af6d;
 
-  letter-spacing: 5px;
+  letter-spacing:5px;
 
-  text-transform: uppercase;
+  text-transform:uppercase;
 
-  margin-bottom: 18px;
+  font-size:.9rem;
+
+  margin-bottom:12px;
 }
 
 .collections-header h2{
 
-  font-size: 5rem;
+  font-size:4.5rem;
 
-  color: white;
+  color:#ffffff;
 
-  font-family: var(--font-heading);
+  font-family:"Playfair Display",serif;
+
+  font-weight:500;
 }
 
-/* ===== GRID ===== */
+/* ==================================================
+   SHOWCASE LAYOUT
+================================================== */
 
 .collections-grid{
 
-  display: grid;
+  display:flex;
 
-  grid-template-columns:
-  repeat(auto-fit,minmax(350px,1fr));
+  flex-direction:column;
 
-  gap: 50px;
+  gap:100px;
+
+  max-width:1400px;
+
+  margin:auto;
 }
 
-/* ===== CARD ===== */
+/* ==================================================
+   CARD
+================================================== */
 
 .collection-card{
 
-  background:
-  rgba(255,255,255,0.04);
+  display:flex;
 
-  border:
-  1px solid rgba(200,169,107,0.15);
+  align-items:center;
 
-  border-radius: 30px;
-
-  overflow: hidden;
-
-  backdrop-filter: blur(14px);
-
-  transition: 0.5s ease;
-
-  box-shadow:
-  0 20px 40px rgba(0,0,0,0.35);
+  gap:60px;
 }
 
-.collection-card:hover{
+/* alternate layout */
 
-  transform:
-  translateY(-10px);
+.collection-card:nth-child(even){
+
+  flex-direction:row-reverse;
 }
 
-/* ===== IMAGE ===== */
+/* ==================================================
+   IMAGE
+================================================== */
 
 .collection-image-wrapper{
 
-  position: relative;
+  flex:1;
 
-  overflow: hidden;
-}
+  position:relative;
 
-.image-overlay{
+  overflow:hidden;
 
-  position: absolute;
-
-  inset: 0;
-
-  background:
-  linear-gradient(
-    to top,
-    rgba(0,0,0,0.5),
-    transparent
-  );
-
-  z-index: 1;
+  border-radius:28px;
 }
 
 .collection-image{
 
-  width: 100%;
-  height: 600px;
+  width:100%;
 
-  object-fit: cover;
+  height:650px;
 
-  transition: 0.7s ease;
+  object-fit:cover;
+
+  display:block;
+
+  transition:.7s ease;
+
+  border-radius:28px;
 }
 
 .collection-card:hover .collection-image{
 
-  transform: scale(1.06);
+  transform:scale(1.05);
 }
 
-/* ===== CONTENT ===== */
+.image-overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,.35),
+    transparent
+  );
+
+  pointer-events:none;
+}
+
+/* ==================================================
+   CONTENT
+================================================== */
 
 .collection-content{
 
-  padding: 35px;
+  flex:1;
 }
 
 .collection-content h3{
 
-  font-size: 2.5rem;
+  color:#ffffff;
 
-  color: white;
+  font-size:3rem;
 
-  margin-bottom: 20px;
+  margin-bottom:20px;
+
+  font-family:"Playfair Display",serif;
+
+  font-weight:500;
 }
 
 .collection-content p{
 
-  color:
-  rgba(255,255,255,0.72);
+  color:rgba(255,255,255,.75);
 
-  line-height: 1.9;
+  font-size:1rem;
 
-  margin-bottom: 35px;
+  line-height:1.9;
+
+  margin-bottom:35px;
+
+  max-width:550px;
 }
 
-/* ===== BUTTON ===== */
+/* ==================================================
+   BUTTON
+================================================== */
 
 .collection-btn{
 
-  display: inline-block;
+  display:inline-flex;
 
-  text-decoration: none;
+  align-items:center;
 
-  padding: 16px 34px;
+  justify-content:center;
 
-  border-radius: 50px;
+  padding:14px 34px;
+
+  border-radius:50px;
+
+  text-decoration:none;
 
   background:
   linear-gradient(
     135deg,
     #d4af6d,
-    #8f6a35
+    #b88746
   );
 
-  color: black;
+  color:#1a0d0d;
 
-  font-weight: 600;
+  font-weight:600;
 
-  transition: 0.4s ease;
+  transition:.4s ease;
 }
 
 .collection-btn:hover{
 
-  transform:
-  translateY(-4px);
+  transform:translateY(-4px);
 
   box-shadow:
-  0 0 25px rgba(200,169,107,0.35);
+  0 0 25px rgba(212,175,109,.35);
 }
 
-/* ===== TABLET ===== */
+/* ==================================================
+   TABLET
+================================================== */
 
-@media(max-width:900px){
+@media(max-width:1100px){
 
-  .collections-header h2{
+  .collection-card{
 
-    font-size: 3.8rem;
-  }
-
-}
-
-/* ===== MOBILE ===== */
-
-@media(max-width:700px){
-
-  .collections{
-
-    padding:
-    100px 6%;
-  }
-
-  .collections-header{
-
-    margin-bottom: 70px;
-  }
-
-  .collections-header h2{
-
-    font-size: 2.7rem;
-  }
-
-  .collections-grid{
-
-    grid-template-columns: 1fr;
+    gap:40px;
   }
 
   .collection-image{
 
-    height: 450px;
+    height:520px;
   }
 
   .collection-content h3{
 
-    font-size: 2rem;
+    font-size:2.4rem;
+  }
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media(max-width:768px){
+
+  .collections{
+
+    padding:70px 5%;
+  }
+
+  .collections-header{
+
+    margin-bottom:50px;
+  }
+
+  .collections-header h2{
+
+    font-size:2.5rem;
+  }
+
+  .collections-grid{
+
+    gap:60px;
+  }
+
+  .collection-card,
+  .collection-card:nth-child(even){
+
+    flex-direction:column;
+  }
+
+  .collection-image{
+
+    height:400px;
   }
 
   .collection-content{
 
-    padding: 28px;
+    text-align:center;
   }
 
+  .collection-content h3{
+
+    font-size:2rem;
+  }
+
+  .collection-content p{
+
+    max-width:100%;
+  }
+
+  .collection-btn{
+
+    width:fit-content;
+
+    margin:auto;
+  }
+}
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media(max-width:480px){
+
+  .collections-header h2{
+
+    font-size:2rem;
+  }
+
+  .collection-image{
+
+    height:320px;
+
+    border-radius:20px;
+  }
+
+  .collection-content h3{
+
+    font-size:1.7rem;
+  }
+
+  .collection-content p{
+
+    font-size:.92rem;
+
+    line-height:1.7;
+  }
 }

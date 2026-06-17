@@ -12,6 +12,8 @@ import Footer from "../../components/Footer/Footer";
 
 // import RoyalSpark from "../../components/RoyalSpark/RoyalSpark";
 
+import LatestCollections from "../../components/LatestCollections/LatestCollections";
+
 function Home() {
 
   return (
@@ -22,6 +24,8 @@ function Home() {
       <Navbar />
 
       <Hero />
+
+      <LatestCollections />
 
       <Collections />
 

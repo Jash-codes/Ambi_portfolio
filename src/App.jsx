@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 
 import Home from "./pages/Home/Home";
-
 import CollectionDetails from "./pages/CollectionDetails/CollectionDetails";
 
 function App() {
@@ -23,7 +22,7 @@ function App() {
           element={<Home />}
         />
 
-        {/* COLLECTION DETAILS */}
+        {/* COLLECTION DETAILS PAGE */}
 
         <Route
           path="/collection/:id"
@@ -33,6 +32,7 @@ function App() {
       </Routes>
 
     </BrowserRouter>
+
   );
 }
 

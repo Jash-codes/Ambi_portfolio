@@ -1,0 +1,326 @@
+/* ===================================
+   SECTION
+=================================== */
+
+.gallery-section{
+
+  padding:100px 6%;
+
+  background:
+  linear-gradient(
+    180deg,
+    #140909 0%,
+    #1d1111 100%
+  );
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+.gallery-header{
+
+  text-align:center;
+
+  max-width:800px;
+
+  margin:0 auto 70px;
+}
+
+.gallery-header span{
+
+  color:#d4af6d;
+
+  text-transform:uppercase;
+
+  letter-spacing:5px;
+
+  font-size:.9rem;
+
+  font-weight:600;
+}
+
+.gallery-header h2{
+
+  color:white;
+
+  font-size:4rem;
+
+  margin:15px 0;
+
+  font-family:
+  "Playfair Display",
+  serif;
+}
+
+.gallery-header p{
+
+  color:
+  rgba(255,255,255,.75);
+
+  line-height:1.8;
+
+  font-size:1rem;
+}
+
+/* ===================================
+   MASONRY GRID
+=================================== */
+
+.gallery-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(12,1fr);
+
+  gap:22px;
+
+  max-width:1500px;
+
+  margin:auto;
+}
+
+/* ===================================
+   CARD
+=================================== */
+
+.gallery-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:24px;
+
+  cursor:pointer;
+
+  background:#1d1111;
+
+  border:
+  1px solid rgba(212,175,109,.15);
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.35);
+
+  transition:.5s ease;
+}
+
+.gallery-card:hover{
+
+  transform:
+  translateY(-8px);
+
+  border-color:#d4af6d;
+
+  box-shadow:
+  0 0 30px rgba(212,175,109,.15);
+}
+
+.gallery-card img{
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+
+  transition:.8s ease;
+}
+
+.gallery-card:hover img{
+
+  transform:scale(1.08);
+}
+
+/* ===================================
+   MASONRY SIZES
+=================================== */
+
+.gallery-card:nth-child(1){
+
+  grid-column:span 6;
+
+  height:520px;
+}
+
+.gallery-card:nth-child(2){
+
+  grid-column:span 3;
+
+  height:250px;
+}
+
+.gallery-card:nth-child(3){
+
+  grid-column:span 3;
+
+  height:250px;
+}
+
+.gallery-card:nth-child(4){
+
+  grid-column:span 4;
+
+  height:320px;
+}
+
+.gallery-card:nth-child(5){
+
+  grid-column:span 4;
+
+  height:320px;
+}
+
+.gallery-card:nth-child(6){
+
+  grid-column:span 4;
+
+  height:320px;
+}
+
+/* ===================================
+   OVERLAY
+=================================== */
+
+.gallery-overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:flex-end;
+
+  padding:25px;
+
+  background:
+  linear-gradient(
+    transparent,
+    rgba(0,0,0,.9)
+  );
+}
+
+.gallery-overlay span{
+
+  color:#d4af6d;
+
+  text-transform:uppercase;
+
+  letter-spacing:2px;
+
+  font-size:.8rem;
+
+  margin-bottom:8px;
+}
+
+.gallery-overlay h3{
+
+  color:white;
+
+  font-size:1.5rem;
+
+  font-family:
+  "Playfair Display",
+  serif;
+}
+
+/* ===================================
+   TABLET
+=================================== */
+
+@media(max-width:992px){
+
+  .gallery-header h2{
+
+    font-size:3rem;
+  }
+
+  .gallery-grid{
+
+    grid-template-columns:
+    repeat(2,1fr);
+  }
+
+  .gallery-card{
+
+    grid-column:span 1 !important;
+
+    height:320px !important;
+  }
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+  .gallery-section{
+
+    padding:70px 5%;
+  }
+
+  .gallery-header{
+
+    margin-bottom:40px;
+  }
+
+  .gallery-header h2{
+
+    font-size:2.4rem;
+  }
+
+  .gallery-grid{
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+  }
+
+  .gallery-card{
+
+    height:280px !important;
+
+    grid-column:span 1 !important;
+  }
+
+  .gallery-overlay{
+
+    padding:18px;
+  }
+
+  .gallery-overlay h3{
+
+    font-size:1.2rem;
+  }
+}
+
+/* ===================================
+   SMALL PHONES
+=================================== */
+
+@media(max-width:480px){
+
+  .gallery-header h2{
+
+    font-size:2rem;
+  }
+
+  .gallery-header p{
+
+    font-size:.9rem;
+  }
+
+  .gallery-card{
+
+    height:240px !important;
+  }
+}

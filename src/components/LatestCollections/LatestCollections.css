@@ -1,0 +1,430 @@
+/* ==================================================
+   LATEST COLLECTIONS SECTION
+================================================== */
+
+.latest-section {
+  padding: 70px 10px;
+  background: linear-gradient(
+    to bottom,
+    #faf8f4,
+    #f4eee4
+  );
+}
+
+.latest-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(
+    auto-fit,
+    minmax(280px,1fr)
+  );
+
+  gap:24px;
+
+  width:100%;
+}
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.latest-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.latest-header span {
+  color: #b8860b;
+  letter-spacing: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.latest-header h2 {
+  font-size: 3.8rem;
+  color: #4b1e1e;
+  margin: 10px 0;
+  font-family: "Playfair Display", serif;
+}
+
+.latest-header p {
+  max-width: 650px;
+  margin: auto;
+  color: #666;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* ==================================================
+   MAIN LAYOUT
+================================================== */
+
+.latest-layout {
+  width: 96%;
+  max-width: 1800px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 3fr 1.1fr;
+
+  gap: 24px;
+}
+
+/* ==================================================
+   FEATURED CARD
+================================================== */
+
+.featured-card {
+  height: 780px;
+
+  position: relative;
+
+  border-radius: 30px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.12);
+
+  transition: .4s ease;
+}
+
+.featured-card:hover {
+  transform: translateY(-8px);
+}
+
+.featured-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: .8s ease;
+}
+
+.featured-card:hover img {
+  transform: scale(1.05);
+}
+
+.featured-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 50px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0,0,0,.85)
+    );
+}
+
+.featured-overlay h3 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-family: "Playfair Display", serif;
+}
+
+.featured-overlay p {
+  color: #ececec;
+  max-width: 550px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.featured-overlay button {
+  width: fit-content;
+
+  padding: 14px 28px;
+
+  border: none;
+  border-radius: 40px;
+
+  background: #d4af6d;
+
+  color: #4b1e1e;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .3s;
+}
+
+.featured-overlay button:hover {
+  transform: translateY(-3px);
+}
+
+/* ==================================================
+   SIDE CARDS
+================================================== */
+
+.side-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.small-card {
+  height: 244px;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+  transition: .4s ease;
+}
+
+.small-card:hover {
+  transform: translateY(-5px);
+}
+
+.small-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: .6s ease;
+}
+
+.small-card:hover img {
+  transform: scale(1.08);
+}
+
+.small-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 22px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0,0,0,.8)
+    );
+}
+
+.small-overlay h4 {
+  color: white;
+  font-size: 1.3rem;
+  font-family: "Playfair Display", serif;
+}
+
+/* ==================================================
+   BOTTOM ARRIVALS GRID
+================================================== */
+
+.arrival-grid {
+  width: 96%;
+  max-width: 1800px;
+
+  margin: 24px auto 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 24px;
+}
+
+.arrival-card {
+  height: 320px;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+  transition: .4s ease;
+}
+
+.arrival-card:hover {
+  transform:
+    translateY(-8px);
+}
+
+.arrival-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: .6s ease;
+}
+
+.arrival-card:hover img {
+  transform: scale(1.08);
+}
+
+.arrival-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 22px;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0,0,0,.8)
+    );
+}
+
+.arrival-overlay h4 {
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Playfair Display", serif;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 992px) {
+
+  .latest-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-card {
+    height: 650px;
+  }
+
+  .side-cards {
+    display: grid;
+    grid-template-columns:
+      repeat(3,1fr);
+  }
+
+  .small-card {
+    height: 260px;
+  }
+
+  .arrival-grid {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 768px) {
+
+  .latest-section {
+    padding: 55px 12px;
+  }
+
+  .latest-header {
+    margin-bottom: 30px;
+  }
+
+  .latest-header h2 {
+    font-size: 2.3rem;
+  }
+
+  .latest-header p {
+    font-size: .9rem;
+  }
+
+  .featured-card {
+    height: 500px;
+    border-radius: 20px;
+  }
+
+  .featured-overlay {
+    padding: 25px;
+  }
+
+  .featured-overlay h3 {
+    font-size: 2rem;
+  }
+
+  .featured-overlay p {
+    font-size: .9rem;
+    margin-bottom: 15px;
+  }
+
+  .side-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .small-card {
+    height: 220px;
+    border-radius: 18px;
+  }
+
+  .arrival-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .arrival-card {
+    height: 200px;
+    border-radius: 18px;
+  }
+
+  .arrival-overlay h4 {
+    font-size: 1rem;
+  }
+}
+
+/* ==================================================
+   SMALL PHONES
+================================================== */
+
+@media (max-width: 480px) {
+
+  .latest-header h2 {
+    font-size: 1.9rem;
+  }
+
+  .featured-card {
+    height: 420px;
+  }
+
+  .featured-overlay h3 {
+    font-size: 1.6rem;
+  }
+
+  .small-card {
+    height: 190px;
+  }
+
+  .arrival-card {
+    height: 170px;
+  }
+
+  .arrival-overlay {
+    padding: 14px;
+  }
+}

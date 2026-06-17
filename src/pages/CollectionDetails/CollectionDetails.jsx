@@ -34,6 +34,22 @@ function CollectionDetails() {
                     description:
                         "Elegant handcrafted silk saree with luxurious zari weaving and royal aesthetics."
                 },
+                {
+                    name: "Royal Crimson Silk",
+
+                    image: "/saree2.jpg",
+
+                    description:
+                        "Elegant handcrafted silk saree with luxurious zari weaving and royal aesthetics."
+                },
+                {
+                    name: "Royal Crimson Silk",
+
+                    image: "/saree1.jpg",
+
+                    description:
+                        "Elegant handcrafted silk saree with luxurious zari weaving and royal aesthetics."
+                },
 
                 {
                     name: "Golden Heritage Weave",
@@ -60,7 +76,23 @@ function CollectionDetails() {
                 {
                     name: "Sunlit Gold Saree",
 
-                    image: "/saree3.jpg",
+                    image: "/saree1.jpg",
+
+                    description:
+                        "Warm golden tones blended with luxurious handcrafted weaving."
+                },
+                {
+                    name: "Sunlit Gold Saree",
+
+                    image: "/saree2.jpg",
+
+                    description:
+                        "Warm golden tones blended with luxurious handcrafted weaving."
+                },
+                {
+                    name: "Sunlit Gold Saree",
+
+                    image: "/saree1.jpg",
 
                     description:
                         "Warm golden tones blended with luxurious handcrafted weaving."
@@ -69,7 +101,7 @@ function CollectionDetails() {
                 {
                     name: "Amber Glow Silk",
 
-                    image: "/saree4.jpg",
+                    image: "/saree2.jpg",
 
                     description:
                         "A rich heritage saree inspired by royal Indian artistry."
