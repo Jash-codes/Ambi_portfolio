@@ -12,7 +12,7 @@ import Footer from "../../components/Footer/Footer";
 
 // import RoyalSpark from "../../components/RoyalSpark/RoyalSpark";
 
-import LatestCollections from "../../components/LatestCollections/LatestCollections";
+// import LatestCollections from "../../components/LatestCollections/LatestCollections";
 
 function Home() {
 
@@ -25,7 +25,7 @@ function Home() {
 
       <Hero />
 
-      <LatestCollections />
+      {/* <LatestCollections /> */}
 
       <Collections />
 

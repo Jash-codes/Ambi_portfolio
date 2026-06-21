@@ -18,7 +18,7 @@ function About() {
         <div className="about-content">
 
           <span className="about-subtitle">
-            FOUNDER • CURATOR • VISIONARY
+            ABOUT DESIGNER
           </span>
 
           <h2>

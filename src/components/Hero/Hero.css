@@ -1,387 +1,172 @@
-/* ===== HERO SECTION ===== */
+/* ==========================================
+   HERO
+========================================== */
 
 .hero{
-
-  position: relative;
-
-  width: 100%;
-  height: 100vh;
-
-  overflow: hidden;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-
-  background:
-  linear-gradient(
-    rgba(0,0,0,0.45),
-    rgba(0,0,0,0.75)
-  ),
-  url("/hero-bg.jpg");
-
-  background-size: cover;
-  background-position: center;
+  position:relative;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
 }
 
-/* ===== OVERLAY ===== */
+/* ==========================================
+   VIDEO
+========================================== */
+
+.hero-video{
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+}
+
+/* ==========================================
+   OVERLAY
+========================================== */
 
 .hero-overlay{
-
-  position: absolute;
-  inset: 0;
-
-  background:
-  radial-gradient(
-    circle,
-    transparent 20%,
-    rgba(0,0,0,0.75) 100%
-  );
-}
-
-/* ===== GOLD GLOW ===== */
-
-.gold-glow{
-
-  position: absolute;
-
-  border-radius: 50%;
+  position:absolute;
+  inset:0;
 
   background:
-  radial-gradient(
-    circle,
-    rgba(200,169,107,0.25),
-    transparent
+  linear-gradient(
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.55)
   );
 
-  filter: blur(60px);
-
-  animation: glowFloat 8s infinite ease-in-out;
+  z-index:1;
 }
 
-.glow-1{
-
-  width: 320px;
-  height: 320px;
-
-  top: 10%;
-  left: 5%;
-}
-
-.glow-2{
-
-  width: 260px;
-  height: 260px;
-
-  bottom: 10%;
-  right: 5%;
-}
-
-@keyframes glowFloat{
-
-  0%{
-    transform: translateY(0px);
-  }
-
-  50%{
-    transform: translateY(-25px);
-  }
-
-  100%{
-    transform: translateY(0px);
-  }
-}
-
-/* ===== HERO CONTENT ===== */
+/* ==========================================
+   CONTENT
+========================================== */
 
 .hero-content{
+  position:relative;
+  z-index:2;
 
-  position: relative;
-  z-index: 2;
+  height:100%;
 
-  max-width: 950px;
+  display:flex;
+  flex-direction:column;
 
-  padding: 20px;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  padding:0 20px;
 }
 
-/* ===== LOGO ===== */
+/* ==========================================
+   LOGO
+========================================== */
 
 .hero-logo{
+  width:500px;
+  max-width:90%;
 
-  width: 160px;
-
-  margin-bottom: 25px;
+  margin-bottom:25px;
 
   filter:
-  drop-shadow(0 0 25px rgba(200,169,107,0.45));
+  drop-shadow(
+    0 0 30px rgba(231,202,144,.3)
+  );
 }
 
-/* ===== TAGLINE ===== */
-
-.hero-tagline{
-
-  color: var(--metallic-gold);
-
-  letter-spacing: 6px;
-
-  font-size: 0.9rem;
-
-  margin-bottom: 20px;
-}
-
-/* ===== TITLE ===== */
-
-.hero-content h1{
-
-  font-size: 6rem;
-
-  line-height: 1.1;
-
-  color: white;
-
-  margin-bottom: 25px;
-
-  font-family: var(--font-heading);
-}
-
-.hero-content h1 span{
-
-  color: var(--metallic-gold);
-}
-
-/* ===== QUOTE ===== */
+/* ==========================================
+   QUOTE
+========================================== */
 
 .hero-quote{
+  color:white;
 
-  font-size: 1.5rem;
+  font-size:2rem;
 
-  font-style: italic;
+  font-style:italic;
 
-  color: #f5e6cb;
+  letter-spacing:1px;
 
-  margin-bottom: 25px;
+  margin-bottom:40px;
 
-  letter-spacing: 2px;
+  text-shadow:
+  0 5px 20px rgba(0,0,0,.5);
 }
 
-/* ===== DESCRIPTION ===== */
+/* ==========================================
+   BUTTON
+========================================== */
 
-.hero-description{
+.hero-btn{
+  text-decoration:none;
 
-  max-width: 700px;
+  padding:16px 40px;
 
-  margin: auto;
+  border-radius:50px;
 
-  font-size: 1.1rem;
+  background:#e7ca90;
 
-  line-height: 1.8;
+  color:#48020c;
 
-  color: rgba(255,255,255,0.82);
+  font-weight:700;
 
-  margin-bottom: 45px;
+  font-size:1rem;
+
+  transition:.4s ease;
 }
 
-/* ===== BUTTONS ===== */
+.hero-btn:hover{
+  transform:translateY(-4px);
 
-.hero-buttons{
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  gap: 20px;
-
-  flex-wrap: wrap;
-}
-
-/* ===== EXPLORE BUTTON ===== */
-
-.explore-btn{
-
-  text-decoration: none;
-
-  padding: 16px 38px;
-
-  border-radius: 50px;
-
-  background:
-  linear-gradient(
-    135deg,
-    #d4af6d,
-    #8f6a35
-  );
-
-  color: black;
-
-  font-weight: 600;
-
-  transition: 0.4s ease;
+  background:#f4f1ea;
 
   box-shadow:
-  0 0 25px rgba(200,169,107,0.3);
+  0 0 30px rgba(231,202,144,.4);
 }
 
-.explore-btn:hover{
+/* ==========================================
+   TABLET
+========================================== */
 
-  transform: translateY(-3px);
-
-  box-shadow:
-  0 0 35px rgba(200,169,107,0.45);
-}
-
-/* ===== WHATSAPP BUTTON ===== */
-
-.hero-whatsapp{
-
-  text-decoration: none;
-
-  padding: 16px 34px;
-
-  border-radius: 50px;
-
-  background:
-  linear-gradient(
-    135deg,
-    #25D366,
-    #128C7E
-  );
-
-  color: white;
-
-  font-weight: 600;
-
-  transition: 0.4s ease;
-}
-
-.hero-whatsapp:hover{
-  transform: translateY(-3px);
-}
-
-/* ===== SCROLL INDICATOR ===== */
-
-.scroll-indicator{
-
-  position: absolute;
-
-  bottom: 35px;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-}
-
-.scroll-indicator span{
-
-  display: block;
-
-  width: 2px;
-  height: 70px;
-
-  background:
-  linear-gradient(
-    transparent,
-    var(--metallic-gold),
-    transparent
-  );
-
-  animation: scrollAnim 2s infinite;
-}
-
-@keyframes scrollAnim{
-
-  0%{
-    opacity: 0;
-    transform: translateY(0);
-  }
-
-  50%{
-    opacity: 1;
-  }
-
-  100%{
-    opacity: 0;
-    transform: translateY(18px);
-  }
-}
-
-/* ===== TABLET ===== */
-
-@media(max-width:900px){
-
-  .hero-content h1{
-    font-size: 4.2rem;
-  }
-
-  .hero-description{
-    font-size: 1rem;
-  }
+@media(max-width:992px){
 
   .hero-logo{
-    width: 130px;
-  }
-
-}
-
-/* ===== MOBILE ===== */
-
-@media(max-width:600px){
-
-  .hero{
-
-    padding: 0 20px;
-
-    background-position: center;
-  }
-
-  .hero-content h1{
-
-    font-size: 2.8rem;
-  }
-
-  .hero-tagline{
-
-    letter-spacing: 4px;
-
-    font-size: 0.75rem;
+    width:500px;
   }
 
   .hero-quote{
-
-    font-size: 1.1rem;
-
-    line-height: 1.7;
+    font-size:1.6rem;
   }
 
-  .hero-description{
+}
 
-    font-size: 0.95rem;
+/* ==========================================
+   MOBILE
+========================================== */
 
-    line-height: 1.8;
+@media(max-width:768px){
+
+  .hero{
+    height:100svh;
   }
 
   .hero-logo{
-    width: 105px;
+    width:320px;
+    margin-bottom:20px;
   }
 
-  .hero-buttons{
-
-    flex-direction: column;
-
-    width: 100%;
+  .hero-quote{
+    font-size:1.2rem;
+    margin-bottom:30px;
   }
 
-  .explore-btn,
-  .hero-whatsapp{
-
-    width: 100%;
-
-    text-align: center;
-  }
-
-  .scroll-indicator span{
-    height: 50px;
+  .hero-btn{
+    padding:14px 30px;
+    font-size:.95rem;
   }
 
 }

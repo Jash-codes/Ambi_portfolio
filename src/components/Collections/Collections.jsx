@@ -1,130 +1,114 @@
 import "./Collections.css";
-
 import { Link } from "react-router-dom";
 
-import { motion } from "framer-motion";
-
 function Collections() {
-
-  const collections = [
-
-    {
-      id:"royalty",
-
-      title:"Reflections of Royalty",
-
-      subtitle:
-      "Regal handcrafted silk sarees inspired by timeless palace heritage.",
-
-      image:"/royal-collection.jpg"
-    },
-
-    {
-      id:"sun-kissed",
-
-      title:"Sun-Kissed Heritage",
-
-      subtitle:
-      "Golden elegance woven with handcrafted sophistication.",
-
-      image:"/sun-collection.jpg"
-    }
-
-  ];
-
   return (
+    <section id="collections" className="collections">
 
-    <section
-      id="collections"
-      className="collections"
-    >
-
-      {/* HEADER */}
-
-      <motion.div
-
-        className="collections-header"
-
-        initial={{ opacity:0, y:60 }}
-
-        whileInView={{ opacity:1, y:0 }}
-
-        transition={{ duration:1 }}
-
-        viewport={{ once:true }}
-      >
-
+      <div className="collections-header">
+        <span>AMBI COLLECTIONS</span>
+        <h2>Our Collections</h2>
         <p>
-          Luxury Saree Collections
+          Discover handcrafted saree stories woven with heritage,
+          elegance and timeless artistry.
         </p>
+      </div>
 
-        <h2>
-          Timeless Royal Elegance
-        </h2>
+      {/* SUNKISSED */}
 
-      </motion.div>
+      <div className="collection-showcase">
 
-      {/* COLLECTION GRID */}
+        <div className="collection-main">
+          <img
+            src="/collections/sunkissed-cover.jpg"
+            alt="Sunkissed Collection"
+          />
 
-      <div className="collections-grid">
+          <div className="collection-overlay">
+            <h3>Sunkissed</h3>
 
-        {
-          collections.map((item,index)=>(
-
-            <motion.div
-
-              className="collection-card"
-
-              key={index}
-
-              initial={{ opacity:0, y:80 }}
-
-              whileInView={{ opacity:1, y:0 }}
-
-              transition={{ duration:1 }}
-
-              viewport={{ once:true }}
+            <Link
+              to="/collection/sunkissed"
+              className="explore-btn"
             >
+              Explore Collection
+            </Link>
+          </div>
+        </div>
 
-              {/* IMAGE */}
+        <div className="collection-side">
 
-              <div className="collection-image-wrapper">
+          <div className="side-image">
+            <img
+              src="/collections/sunkissed1.jpg"
+              alt=""
+            />
+          </div>
 
-                <div className="image-overlay"></div>
+          <div className="side-image">
+            <img
+              src="/collections/sunkissed2.jpg"
+              alt=""
+            />
+          </div>
 
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="collection-image"
-                />
+          <div className="side-image">
+            <img
+              src="/collections/sunkissed3.jpg"
+              alt=""
+            />
+          </div>
 
-              </div>
+        </div>
 
-              {/* CONTENT */}
+      </div>
 
-              <div className="collection-content">
+      {/* CLOUDBURST */}
 
-                <h3>
-                  {item.title}
-                </h3>
+      <div className="collection-showcase">
 
-                <p>
-                  {item.subtitle}
-                </p>
+        <div className="collection-main">
+          <img
+            src="/collections/cloudburst-cover.jpg"
+            alt="Cloudburst Collection"
+          />
 
-                <Link
-                  to={`/collection/${item.id}`}
-                  className="collection-btn"
-                >
-                  Explore Collection
-                </Link>
+          <div className="collection-overlay">
+            <h3>Cloudburst</h3>
 
-              </div>
+            <Link
+              to="/collection/cloudburst"
+              className="explore-btn"
+            >
+              Explore Collection
+            </Link>
+          </div>
+        </div>
 
-            </motion.div>
+        <div className="collection-side">
 
-          ))
-        }
+          <div className="side-image">
+            <img
+              src="/collections/cloudburst1.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="side-image">
+            <img
+              src="/collections/cloudburst2.jpg"
+              alt=""
+            />
+          </div>
+
+          <div className="side-image">
+            <img
+              src="/collections/cloudburst3.jpg"
+              alt=""
+            />
+          </div>
+
+        </div>
 
       </div>
 
