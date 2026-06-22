@@ -6,7 +6,7 @@ import Collections from "../../components/Collections/Collections";
 
 import About from "../../components/About/About";
 
-import Gallery from "../../components/Gallery/Gallery";
+import About2 from "../../components/About2/About2";
 
 import Footer from "../../components/Footer/Footer";
 
@@ -31,7 +31,7 @@ function Home() {
 
       <About />
 
-      <Gallery />
+      <About2 />
 
       <Footer />
     </>

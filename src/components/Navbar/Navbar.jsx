@@ -103,11 +103,11 @@ function Navbar() {
         </a>
 
         <a href="#about" onClick={() => setMenuOpen(false)}>
-          About
+          About Designer
         </a>
 
-        <a href="#gallery" onClick={() => setMenuOpen(false)}>
-          Gallery
+        <a href="#about2" onClick={() => setMenuOpen(false)}>
+          About Ambi
         </a>
 
         <a href="#footer" onClick={() => setMenuOpen(false)}>

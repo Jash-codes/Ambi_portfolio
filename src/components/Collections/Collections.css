@@ -1,248 +1,297 @@
-.collections {
-  padding: 120px 6%;
-  background: #f4f1ea;
+/* ==================================
+   SECTION
+================================== */
+
+.collections{
+  padding:120px 6%;
+  background:#f4f1ea;
 }
 
-/* ===========================
+/* ==================================
    HEADER
-=========================== */
+================================== */
 
-.collections-header {
-  text-align: center;
-  margin-bottom: 80px;
+.collections-header{
+  text-align:center;
+  margin-bottom:90px;
 }
 
-.collections-header span {
-  color: #a58b7a;
-  font-size: 0.85rem;
-  letter-spacing: 5px;
-  text-transform: uppercase;
+.collections-header span{
+  display:block;
+
+  color:#a58b7a;
+
+  font-size:.85rem;
+
+  letter-spacing:6px;
+
+  text-transform:uppercase;
+
+  margin-bottom:14px;
 }
 
-.collections-header h2 {
-  font-size: 4rem;
-  margin: 18px 0;
-  color: #48020c;
-  font-family: "Playfair Display", serif;
+.collections-header h2{
+  color:#48020c;
+
+  font-size:4rem;
+
+  margin-bottom:18px;
+
+  font-family:"Playfair Display",serif;
 }
 
-.collections-header p {
-  color: #6b5b52;
-  max-width: 650px;
-  margin: auto;
-  line-height: 1.8;
+.collections-header p{
+  max-width:650px;
+
+  margin:auto;
+
+  color:#6d5e55;
+
+  line-height:1.9;
 }
 
-/* ===========================
-   COLLECTION BLOCK
-=========================== */
+/* ==================================
+   COLLECTION CARD
+================================== */
 
-.collection-showcase {
-  display: grid;
-  grid-template-columns: 2.5fr 1fr;
-  gap: 24px;
-  margin-bottom: 70px;
-}
+.collection-card{
+  display:grid;
 
-/* ===========================
-   MAIN IMAGE
-=========================== */
+  grid-template-columns:420px 1fr;
 
-.collection-main {
-  position: relative;
-  overflow: hidden;
-  border-radius: 28px;
-  min-height: 650px;
+  gap:70px;
+
+  align-items:center;
+
+  margin-bottom:90px;
+
+  background:white;
+
+  padding:35px;
+
+  border-radius:32px;
 
   box-shadow:
-    0 20px 50px rgba(0,0,0,0.12);
+  0 15px 40px rgba(0,0,0,.06);
 }
 
-.collection-main img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: .7s ease;
+/* ==================================
+   IMAGE
+================================== */
+
+.collection-image{
+  overflow:hidden;
+
+  border-radius:24px;
 }
 
-.collection-main:hover img {
-  transform: scale(1.05);
+.collection-image img{
+  width:100%;
+
+  height:700px;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:.5s ease;
 }
 
-.collection-overlay {
-  position: absolute;
-  inset: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-
-  padding: 50px;
-
-  background:
-  linear-gradient(
-    to top,
-    rgba(0,0,0,.75),
-    rgba(0,0,0,.15),
-    transparent
-  );
+.collection-card:hover .collection-image img{
+  transform:scale(1.03);
 }
 
-.collection-overlay h3 {
-  color: white;
-  font-size: 4rem;
-  margin-bottom: 20px;
-  font-family: "Playfair Display", serif;
+/* ==================================
+   CONTENT
+================================== */
+
+.collection-content{
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
 }
 
-.explore-btn {
-  width: fit-content;
+.collection-label{
+  color:#a58b7a;
 
-  padding: 14px 32px;
+  letter-spacing:4px;
 
-  border-radius: 50px;
+  font-size:.8rem;
 
-  text-decoration: none;
+  text-transform:uppercase;
 
-  background: #e7ca90;
-
-  color: #48020c;
-
-  font-weight: 700;
-
-  transition: .3s ease;
+  margin-bottom:12px;
 }
 
-.explore-btn:hover {
-  transform: translateY(-3px);
+.collection-content h3{
+  color:#48020c;
+
+  font-size:4rem;
+
+  margin-bottom:25px;
+
+  font-family:"Playfair Display",serif;
+}
+
+.collection-content p{
+  color:#5f534c;
+
+  line-height:2;
+
+  font-size:1rem;
+
+  margin-bottom:35px;
+}
+
+/* ==================================
+   PALETTE
+================================== */
+
+.palette-title{
+  color:#48020c;
+
+  font-weight:600;
+
+  margin-bottom:16px;
+}
+
+.palette{
+  display:flex;
+
+  gap:14px;
+
+  margin-bottom:40px;
+}
+
+.palette span{
+  width:48px;
+
+  height:48px;
+
+  border-radius:50%;
+
+  border:2px solid rgba(0,0,0,.08);
+
+  transition:.3s ease;
+}
+
+.palette span:hover{
+  transform:scale(1.1);
+}
+
+/* ==================================
+   BUTTON
+================================== */
+
+.explore-btn{
+  width:fit-content;
+
+  text-decoration:none;
+
+  background:#e7ca90;
+
+  color:#48020c;
+
+  font-weight:700;
+
+  padding:15px 30px;
+
+  border-radius:50px;
+
+  transition:.3s ease;
+}
+
+.explore-btn:hover{
+  transform:translateY(-3px);
 
   box-shadow:
   0 10px 25px rgba(231,202,144,.4);
 }
 
-/* ===========================
-   SIDE IMAGES
-=========================== */
-
-.collection-side {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.side-image {
-  height: 203px;
-
-  border-radius: 24px;
-
-  overflow: hidden;
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,0.1);
-}
-
-.side-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-  transition: .6s ease;
-}
-
-.side-image:hover img {
-  transform: scale(1.08);
-}
-
-/* ===========================
+/* ==================================
    TABLET
-=========================== */
+================================== */
 
-@media(max-width:1024px){
+@media(max-width:1100px){
 
-  .collection-main{
-    min-height:550px;
+  .collection-card{
+    grid-template-columns:320px 1fr;
+    gap:40px;
   }
 
-  .side-image{
-    height:170px;
+  .collection-image img{
+    height:550px;
   }
 
-  .collection-overlay h3{
+  .collection-content h3{
     font-size:3rem;
   }
 
 }
 
-/* ===========================
+/* ==================================
    MOBILE
-=========================== */
+================================== */
 
 @media(max-width:768px){
 
   .collections{
-    padding:90px 5%;
+    padding:90px 20px;
   }
 
   .collections-header{
-    margin-bottom:50px;
+    margin-bottom:60px;
   }
 
   .collections-header h2{
+    font-size:2.7rem;
+  }
+
+  .collection-card{
+    grid-template-columns:1fr;
+
+    gap:30px;
+
+    padding:22px;
+  }
+
+  .collection-image img{
+    height:450px;
+  }
+
+  .collection-content h3{
     font-size:2.5rem;
   }
 
-  .collection-showcase{
-    grid-template-columns:1fr;
-    gap:18px;
-    margin-bottom:50px;
+  .palette{
+    flex-wrap:wrap;
   }
-
-  .collection-main{
-    min-height:420px;
-  }
-
-  .collection-overlay{
-    padding:30px;
-  }
-
-  .collection-overlay h3{
-    font-size:2.3rem;
-  }
-
-  .collection-side{
-    flex-direction:row;
-  }
-
-  .side-image{
-    flex:1;
-    height:120px;
-  }
-
 }
 
-/* ===========================
+/* ==================================
    SMALL MOBILE
-=========================== */
+================================== */
 
 @media(max-width:480px){
 
-  .collection-main{
-    min-height:360px;
-    border-radius:20px;
+  .collection-image img{
+    height:380px;
   }
 
-  .collection-overlay h3{
+  .collection-content h3{
     font-size:2rem;
+  }
+
+  .palette span{
+    width:38px;
+    height:38px;
   }
 
   .explore-btn{
     width:100%;
     text-align:center;
-  }
-
-  .side-image{
-    height:100px;
-    border-radius:16px;
   }
 
 }

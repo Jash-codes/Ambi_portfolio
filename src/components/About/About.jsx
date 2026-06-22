@@ -28,22 +28,35 @@ function About() {
           <div className="royal-divider"></div>
 
           <p>
-            Ambi by Sujata Pai is a celebration of timeless
-            Indian craftsmanship, heritage textiles, and
-            elegant luxury.
+            Sujata Pai is a self-taught Fashion and Interior Designer, and also an excellent
+            cook. At heart, she calls herself a creative soul. Her design style is deeply
+            inspired by the raw beauty found in every region—the music, the food, the way
+            the sunlight hits differently in each place—and how all of it stirs different
+            emotions.
           </p>
 
           <p>
-            Every collection is thoughtfully curated to
-            honour tradition while embracing contemporary
-            sophistication.
+            She has a natural gift for capturing these emotions and translating them into
+            styling for her clients—whether it’s customizing a unique outfit or creating a
+            beautiful living space. Her creativity also shines through in her cooking, where
+            she brings the same emotional depth and imagination.
           </p>
 
           <p>
-            With decades of passion for design and culture,
-            Sujata Pai has transformed Ambi into a destination
-            where every saree tells a story.
+            For Sujata, every creation begins with a spark of emotion. She then imagines the
+            final outcome and the happiness it will bring to her clients. Her clients come
+            from all age groups and genders, all seeking something unique—styling that
+            reflects who they are, with great quality, perfect fit, and fine finishing. True to
+            her motto:
+            “There is Luxury in Simplicity.”
+            ❤
           </p>
+
+          <p>
+            Over the years, Sujata has taken part in many shows and exhibitions. Now, she
+            also works as a freelance consultant, collaborating with weavers, brands, and
+            exhibition organisers to help them optimise their product presentation and
+            improve their sales.</p>
 
           <div className="royal-quote">
 
