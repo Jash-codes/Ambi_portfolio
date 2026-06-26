@@ -1,214 +1,183 @@
 import "./CollectionDetails.css";
-
 import { useParams } from "react-router-dom";
-
 import Navbar from "../../components/Navbar/Navbar";
-
-
-import { Link } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
 function CollectionDetails() {
 
-    const { id } = useParams();
+  const { id } = useParams();
 
-    /* =========================
-       COLLECTION DATA
-    ========================== */
+  const collections = {
 
-    const collections = {
+    sunkissed: {
+      title: "Sunkissed",
+      subtitle:
+        "Golden elegance woven with timeless craftsmanship.",
 
-        royalty: {
-
-            title: "Reflections of Royalty",
-
-            subtitle:
-                "Regal handcrafted silk sarees inspired by palace heritage.",
-
-            sarees: [
-
-                {
-                    name: "Royal Crimson Silk",
-
-                    image: "/saree1.jpg",
-
-                    description:
-                        "Elegant handcrafted silk saree with luxurious zari weaving and royal aesthetics."
-                },
-                {
-                    name: "Royal Crimson Silk",
-
-                    image: "/saree2.jpg",
-
-                    description:
-                        "Elegant handcrafted silk saree with luxurious zari weaving and royal aesthetics."
-                },
-                {
-                    name: "Royal Crimson Silk",
-
-                    image: "/saree1.jpg",
-
-                    description:
-                        "Elegant handcrafted silk saree with luxurious zari weaving and royal aesthetics."
-                },
-
-                {
-                    name: "Golden Heritage Weave",
-
-                    image: "/saree2.jpg",
-
-                    description:
-                        "Inspired by traditional palace craftsmanship and timeless elegance."
-                }
-
-            ]
-
+      sarees: [
+        {
+          name: "Sunkissed Saree 01",
+          image: "/saree1.jpg"
         },
-
-        "sun-kissed": {
-
-            title: "Sun-Kissed Heritage",
-
-            subtitle:
-                "Golden elegance woven with timeless craftsmanship.",
-
-            sarees: [
-
-                {
-                    name: "Sunlit Gold Saree",
-
-                    image: "/saree1.jpg",
-
-                    description:
-                        "Warm golden tones blended with luxurious handcrafted weaving."
-                },
-                {
-                    name: "Sunlit Gold Saree",
-
-                    image: "/saree2.jpg",
-
-                    description:
-                        "Warm golden tones blended with luxurious handcrafted weaving."
-                },
-                {
-                    name: "Sunlit Gold Saree",
-
-                    image: "/saree1.jpg",
-
-                    description:
-                        "Warm golden tones blended with luxurious handcrafted weaving."
-                },
-
-                {
-                    name: "Amber Glow Silk",
-
-                    image: "/saree2.jpg",
-
-                    description:
-                        "A rich heritage saree inspired by royal Indian artistry."
-                }
-
-            ]
-
+        {
+          name: "Sunkissed Saree 02",
+          image: "/saree2.jpg"
+        },
+        {
+          name: "Sunkissed Saree 03",
+          image: "/saree3.jpg"
+        },
+        {
+          name: "Sunkissed Saree 04",
+          image: "/saree4.jpg"
+        },
+        {
+          name: "Sunkissed Saree 05",
+          image: "/saree5.jpg"
+        },
+        {
+          name: "Sunkissed Saree 06",
+          image: "/saree6.jpg"
         }
+      ]
+    },
 
-    };
+    cloudburst: {
+      title: "Cloudburst",
+      subtitle:
+        "Dreamy textures inspired by luminous skies and heritage artistry.",
 
-    const collection = collections[id];
+      sarees: [
+        {
+          name: "Cloudburst Saree 01",
+          image: "/cloud1.jpg"
+        },
+        {
+          name: "Cloudburst Saree 02",
+          image: "/cloud2.jpg"
+        },
+        {
+          name: "Cloudburst Saree 03",
+          image: "/cloud3.jpg"
+        },
+        {
+          name: "Cloudburst Saree 04",
+          image: "/cloud4.jpg"
+        },
+        {
+          name: "Cloudburst Saree 05",
+          image: "/cloud5.jpg"
+        },
+        {
+          name: "Cloudburst Saree 06",
+          image: "/cloud6.jpg"
+        }
+      ]
+    }
 
+  };
+
+  const collection = collections[id];
+
+  if (!collection) {
     return (
-
-        <>
-            <Navbar />
-
-            <section className="collection-details">
-
-
-                {/* BORDER STRIPS */}
-
-                <div className="royal-border left"></div>
-
-                <div className="royal-border right"></div>
-
-                {/* HEADER */}
-
-                <div className="details-header">
-
-                    <p>
-                        Luxury Saree Collection
-                    </p>
-
-                    <h1>
-                        {collection.title}
-                    </h1>
-
-                    <span>
-                        {collection.subtitle}
-                    </span>
-
-                </div>
-
-                {/* SAREES */}
-
-                <div className="saree-grid">
-
-                    {
-                        collection.sarees.map((item, index) => (
-
-                            <div
-                                className="saree-card"
-                                key={index}
-                            >
-
-                                {/* IMAGE */}
-
-                                <div className="saree-image-wrapper">
-
-                                    <img
-                                        src={item.image}
-                                        alt={item.name}
-                                    />
-
-                                </div>
-
-                                {/* CONTENT */}
-
-                                <div className="saree-content">
-
-                                    <h3>
-                                        {item.name}
-                                    </h3>
-
-                                    <p>
-                                        {item.description}
-                                    </p>
-
-                                    <a
-                                        href="https://wa.me/919999999999"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        Inquire on WhatsApp
-                                    </a>
-
-                                </div>
-
-                            </div>
-
-                        ))
-                    }
-
-                </div>
-
-            </section>
-
-        </>
+      <>
+        <Navbar />
+        <div className="not-found">
+          Collection Not Found
+        </div>
+      </>
     );
+  }
+
+  return (
+    <>
+      <Navbar />
+
+      <section className="collection-details">
+
+        {/* LEFT FRAME */}
+        <div className="side-frame">
+          <img
+            src="/border-strip.png"
+            alt="Royal Border"
+          />
+        </div>
+
+        {/* CONTENT */}
+        <div className="collection-content">
+
+          <div className="details-header">
+
+            <span>
+              AMBI COLLECTION
+            </span>
+
+            <h1>
+              {collection.title}
+            </h1>
+
+            <p>
+              {collection.subtitle}
+            </p>
+
+          </div>
+
+          <div className="saree-grid">
+
+            {collection.sarees.map((saree, index) => (
+
+              <div
+                className="saree-card"
+                key={index}
+              >
+
+                <div className="saree-image">
+
+                  <img
+                    src={saree.image}
+                    alt={saree.name}
+                  />
+
+                </div>
+
+                <div className="saree-info">
+
+                  <h3>
+                    {saree.name}
+                  </h3>
+
+                  <a
+                    href="https://wa.me/919999999999"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="whatsapp-btn"
+                  >
+                    <FaWhatsapp />
+                    WhatsApp Inquiry
+                  </a>
+
+                </div>
+
+              </div>
+
+            ))}
+
+          </div>
+
+        </div>
+
+        {/* RIGHT FRAME */}
+        <div className="side-frame">
+          <img
+            src="/border-strip.png"
+            alt="Royal Border"
+          />
+        </div>
+
+      </section>
+    </>
+  );
 }
 
 export default CollectionDetails;
-// one pic is good
-
-// are collecctions color based 
-// mam profile
-// collection details
-// saree pics AI 

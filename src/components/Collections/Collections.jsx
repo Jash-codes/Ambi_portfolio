@@ -58,21 +58,21 @@ function Collections() {
 
           <div className="palette">
 
-            <span style={{background:"#556246"}}></span>
+            <span style={{ background: "#556246" }}></span>
 
-            <span style={{background:"#DDB8BE"}}></span>
+            <span style={{ background: "#DDB8BE" }}></span>
 
-            <span style={{background:"#202130"}}></span>
+            <span style={{ background: "#202130" }}></span>
 
-            <span style={{background:"#F0E7D7"}}></span>
+            <span style={{ background: "#F0E7D7" }}></span>
 
-            <span style={{background:"#D08B72"}}></span>
+            <span style={{ background: "#D08B72" }}></span>
 
-            <span style={{background:"#A6533B"}}></span>
+            <span style={{ background: "#A6533B" }}></span>
 
-            <span style={{background:"#D7A62D"}}></span>
+            <span style={{ background: "#D7A62D" }}></span>
 
-            <span style={{background:"#C1272D"}}></span>
+            <span style={{ background: "#C1272D" }}></span>
 
           </div>
 
@@ -124,13 +124,13 @@ function Collections() {
 
           <div className="palette">
 
-            <span style={{background:"#F8F6F2"}}></span>
+            <span style={{ background: "#F8F6F2" }}></span>
 
-            <span style={{background:"#EAE6DE"}}></span>
+            <span style={{ background: "#EAE6DE" }}></span>
 
-            <span style={{background:"#C79660"}}></span>
+            <span style={{ background: "#C79660" }}></span>
 
-            <span style={{background:"#111111"}}></span>
+            <span style={{ background: "#111111" }}></span>
 
           </div>
 

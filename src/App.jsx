@@ -1,8 +1,4 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home/Home";
 import CollectionDetails from "./pages/CollectionDetails/CollectionDetails";
@@ -11,27 +7,19 @@ function App() {
 
   return (
 
-    <BrowserRouter>
+    <Routes>
 
-      <Routes>
+      <Route
+        path="/"
+        element={<Home />}
+      />
 
-        {/* HOME PAGE */}
+      <Route
+        path="/collection/:id"
+        element={<CollectionDetails />}
+      />
 
-        <Route
-          path="/"
-          element={<Home />}
-        />
-
-        {/* COLLECTION DETAILS PAGE */}
-
-        <Route
-          path="/collection/:id"
-          element={<CollectionDetails />}
-        />
-
-      </Routes>
-
-    </BrowserRouter>
+    </Routes>
 
   );
 }

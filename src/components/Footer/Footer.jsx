@@ -1,101 +1,119 @@
 import "./Footer.css";
 
 import {
-  FaWhatsapp,
   FaInstagram,
   FaFacebookF,
+  FaWhatsapp,
   FaEnvelope,
   FaMapMarkerAlt,
   FaPhoneAlt,
-  FaClock
+  FaClock,
 } from "react-icons/fa";
 
 function Footer() {
-
   return (
+    <footer className="footer" id="footer">
 
-    <footer
-      id="footer"
-      className="footer"
-    >
+      {/* Decorative Frame */}
+
+      <img
+        src="/wappborderframe.png"
+        alt="Frame"
+        className="footer-frame"
+      />
 
       <div className="footer-container">
 
-        {/* =========================
-            LEFT SIDE
-        ========================= */}
+        {/* ===========================
+            LOGO
+        =========================== */}
 
-        <div className="footer-left">
+        <div className="footer-logo-section">
 
           <img
-            src="/wappborderframe.png"
-            alt="Royal Frame"
-            className="footer-frame"
+            src="/logo.png"
+            alt="Ambi Logo"
+            className="footer-logo"
           />
 
-          {/* GLOW */}
+          <h2>
+            Ambi by Sujata Pai
+          </h2>
 
-          <div className="footer-left-glow"></div>
+        </div>
 
-          {/* CONTENT */}
+        {/* ===========================
+            INFO
+        =========================== */}
 
-          <div className="footer-left-content">
+        <div className="footer-info">
 
-            <p className="footer-small-text">
-              Luxury Saree Concierge
-            </p>
+          <div className="info-box">
 
-            <h2>
-              Connect With
-              Ambi
-            </h2>
+            <FaMapMarkerAlt />
 
-            <span>
-              Personalized assistance for
-              collections, saree availability,
-              boutique visits, and styling support.
-            </span>
+            <div>
 
-            {/* BUTTON */}
+              <h4>Address</h4>
 
-            <a
-              href="https://wa.me/919999999999"
-              target="_blank"
-              rel="noreferrer"
-              className="footer-whatsapp-btn"
-            >
+              <p>
+                83, Eldams Road,
+                <br />
+                Sriram Colony,
+                <br />
+                Teynampet,
+                Chennai - 600018
+              </p>
 
-              <FaWhatsapp />
+            </div>
 
-              Chat on WhatsApp
+          </div>
 
-            </a>
+          <div className="info-box">
 
-            {/* SOCIALS */}
+            <FaPhoneAlt />
 
-            <div className="footer-socials">
+            <div>
 
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaInstagram />
-              </a>
+              <h4>Contact</h4>
 
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaFacebookF />
-              </a>
+              <p>
+                044 4502 6080
+              </p>
 
-              <a
-                href="mailto:ambi@gmail.com"
-              >
-                <FaEnvelope />
-              </a>
+            </div>
+
+          </div>
+
+          <div className="info-box">
+
+            <FaEnvelope />
+
+            <div>
+
+              <h4>Email</h4>
+
+              <p>
+                ambibysujatapai@gmail.com
+              </p>
+
+            </div>
+
+          </div>
+
+          <div className="info-box">
+
+            <FaClock />
+
+            <div>
+
+              <h4>Studio Hours</h4>
+
+              <p>
+                11:00 AM – 6:00 PM
+                <br />
+                Sunday Holiday
+              </p>
 
             </div>
 
@@ -103,154 +121,70 @@ function Footer() {
 
         </div>
 
-        {/* =========================
-            RIGHT SIDE
-        ========================= */}
+        {/* ===========================
+            NAVIGATION
+        =========================== */}
 
-        <div className="footer-right">
+        <div className="footer-links">
 
-          {/* TOP GOLD LINE */}
+          <a href="#home">
+            Home
+          </a>
 
-          <div className="footer-gold-line"></div>
+          <a href="#collections">
+            Collections
+          </a>
 
-          {/* BRAND */}
+          <a href="#about">
+            About Designer
+          </a>
 
-          <div className="footer-brand">
+          <a href="#about2">
+            About Ambi
+          </a>
 
-            <img
-              src="/logo.png"
-              alt="Ambi Logo"
-            />
+        </div>
 
-            <div>
+        {/* ===========================
+            SOCIAL
+        =========================== */}
 
-              <h2>
-                Ambi by Sujata Pai
-              </h2>
+        <div className="footer-social">
 
-              <p>
-                Crafted with heritage,
-                elegance, and timeless simplicity.
-              </p>
+          <a
+            href="https://instagram.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaInstagram />
+          </a>
 
-            </div>
+          <a
+            href="https://facebook.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaFacebookF />
+          </a>
 
-          </div>
+          <a
+            href="https://wa.me/919999999999"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaWhatsapp />
+          </a>
 
-          {/* DETAILS */}
+        </div>
 
-          <div className="footer-details">
+        {/* ===========================
+            COPYRIGHT
+        =========================== */}
 
-            {/* ADDRESS */}
+        <div className="footer-bottom">
 
-            <div className="footer-item">
-
-              <div className="footer-icon">
-
-                <FaMapMarkerAlt />
-
-              </div>
-
-              <div>
-
-                <h4>
-                  Boutique Address
-                </h4>
-
-                <p>
-                  83, Eldams Rd,
-                  Sriram Colony,
-                  Teynampet,
-                  Chennai,
-                  Tamil Nadu 600018
-                </p>
-
-              </div>
-
-            </div>
-
-            {/* PHONE */}
-
-            <div className="footer-item">
-
-              <div className="footer-icon">
-
-                <FaPhoneAlt />
-
-              </div>
-
-              <div>
-
-                <h4>
-                  Contact
-                </h4>
-
-                <p>
-                  044 4502 6080
-                </p>
-
-              </div>
-
-            </div>
-
-            {/* HOURS */}
-
-            <div className="footer-item">
-
-              <div className="footer-icon">
-
-                <FaClock />
-
-              </div>
-
-              <div>
-
-                <h4>
-                  Boutique Hours
-                </h4>
-
-                <p>
-                  Open Daily — 11 AM Onwards
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* LINKS */}
-
-          <div className="footer-links">
-
-            <a href="#collections">
-              Collections
-            </a>
-
-            <a href="#about">
-              About
-            </a>
-
-            <a href="#gallery">
-              Gallery
-            </a>
-
-            <a href="#home">
-              Home
-            </a>
-
-          </div>
-
-          {/* COPYRIGHT */}
-
-          <div className="footer-bottom">
-
-            <span>
-              © 2026 Ambi by Sujata Pai.
-              All Rights Reserved.
-            </span>
-
-          </div>
+          © {new Date().getFullYear()} Ambi by Sujata Pai.
+          All Rights Reserved.
 
         </div>
 

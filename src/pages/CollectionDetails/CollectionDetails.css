@@ -1,352 +1,331 @@
-/* ===== PAGE ===== */
+/* ==========================
+   PAGE
+========================== */
 
-.collection-details{
-
-  position: relative;
+.collection-details {
 
   min-height: 100vh;
 
-  padding:
-  140px 8% 100px;
-
-  background:
-  linear-gradient(
-    180deg,
-    #120907,
-    #241715
-  );
-
-  overflow: hidden;
-}
-
-/* ===== BACK BUTTON ===== */
-
-.back-home-btn{
-
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 10px;
-
-  margin-bottom: 60px;
-
-  text-decoration: none;
-
-  padding: 14px 28px;
-
-  border-radius: 50px;
-
-  background:
-  rgba(255,255,255,0.06);
-
-  border:
-  1px solid rgba(200,169,107,0.22);
-
-  backdrop-filter: blur(12px);
-
-  color: white;
-
-  font-weight: 500;
-
-  transition: 0.4s ease;
-
-  position: relative;
-
-  z-index: 5;
-}
-
-/* HOVER */
-
-
-
-/* ===== BORDER STRIPS ===== */
-
-/* =========================
-   ROYAL BORDER
-========================= */
-
-.royal-border{
-
-  position: absolute;
-
-  top: 0;
-
-  width: 120px;
-
-  height: 100%;
-
-  background-image:
-  url("/border-strip.png");
-
-  background-repeat: repeat-y;
-
-  background-size: contain;
-
-  opacity: 0.95;
-
-  filter:
-  brightness(1.5)
-  contrast(1.25)
-  saturate(1.3)
-  drop-shadow(0 0 10px rgba(212,175,109,0.35))
-  drop-shadow(0 0 25px rgba(212,175,109,0.25));
-
-  z-index: 1;
-
-  pointer-events: none;
-}
-
-/* LEFT */
-
-.royal-border.left{
-
-  left: 0;
-}
-
-/* RIGHT */
-
-.royal-border.right{
-
-  right: 0;
-
-  transform: scaleX(-1);
-}
-
-/* GOLD OVERLAY */
-/* 
-.royal-border::after{
-
-  content:"";
-
-  position: absolute;
-
-  inset: 0;
-
-  background:
-  linear-gradient(
-    180deg,
-    rgba(212,175,109,0.18),
-    transparent,
-    rgba(212,175,109,0.18)
-  );
-
-  mix-blend-mode: screen;
-} */
-
-/* ===== HEADER ===== */
-
-.details-header{
-
-  text-align: center;
-
-  margin-bottom: 90px;
-
-  position: relative;
-  z-index: 2;
-}
-
-.details-header p{
-
-  color: var(--metallic-gold);
-
-  letter-spacing: 5px;
-
-  margin-bottom: 20px;
-
-  text-transform: uppercase;
-}
-
-.details-header h1{
-
-  font-size: 5rem;
-
-  color: white;
-
-  margin-bottom: 20px;
-}
-
-.details-header span{
-
-  color:
-  rgba(255,255,255,0.7);
-
-  font-size: 1.1rem;
-}
-
-/* ===== GRID ===== */
-
-.saree-grid{
-
-  position: relative;
-  z-index: 2;
+  background: #f4f1ea;
 
   display: grid;
 
-  grid-template-columns:
-  repeat(auto-fit,minmax(340px,1fr));
+  grid-template-columns: 85px 1fr 85px;
 
-  gap: 45px;
+  gap: 30px;
+
+  padding: 120px 0 80px;
 }
 
+/* ==========================
+   BORDER FRAME
+========================== */
 
-/* ===== CARD ===== */
+.side-frame {
 
-.saree-card{
+  display: flex;
 
-  background:
-  rgba(255,255,255,0.04);
+  justify-content: center;
 
-  border:
-  1px solid rgba(200,169,107,0.15);
-
-  border-radius: 28px;
-
-  overflow: hidden;
-
-  backdrop-filter: blur(14px);
-
-  transition: 0.5s ease;
+  align-items: stretch;
 }
 
-.saree-card:hover{
+.side-frame img {
 
-  transform:
-  translateY(-10px);
+  width: 75px;
 
-  box-shadow:
-  0 20px 40px rgba(0,0,0,0.45);
+  height: 100%;
+
+  object-fit: cover;
 }
 
-/* ===== IMAGE ===== */
+/* ==========================
+   CONTENT
+========================== */
 
-.saree-image-wrapper{
-
-  overflow: hidden;
-}
-
-.saree-image-wrapper img{
+.collection-content {
 
   width: 100%;
-  height: 520px;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.details-header {
+
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.details-header span {
+
+  display: block;
+
+  color: #a58b7a;
+
+  font-size: 0.8rem;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 15px;
+}
+
+.details-header h1 {
+
+  color: #48020c;
+
+  font-size: 4rem;
+
+  font-family: "Playfair Display", serif;
+
+  margin-bottom: 15px;
+}
+
+.details-header p {
+
+  color: #6b5b52;
+
+  max-width: 650px;
+
+  margin: auto;
+
+  line-height: 1.8;
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.saree-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.saree-card {
+
+  background: white;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,.08);
+
+  transition: .35s ease;
+}
+
+.saree-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,.12);
+}
+
+/* ==========================
+   IMAGE
+========================== */
+
+.saree-image {
+
+  overflow: hidden;
+}
+
+.saree-image img {
+
+  width: 100%;
+
+  height: 430px;
 
   object-fit: cover;
 
-  transition: 0.7s ease;
+  transition: .5s ease;
 }
 
-.saree-card:hover img{
+.saree-card:hover img {
 
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
-/* ===== CONTENT ===== */
+/* ==========================
+   INFO
+========================== */
 
-.saree-content{
+.saree-info {
 
-  padding: 30px;
+  padding: 20px;
 }
 
-.saree-content h3{
+.saree-info h3 {
 
-  font-size: 2rem;
+  color: #48020c;
 
-  color: white;
+  font-size: 1.15rem;
 
   margin-bottom: 18px;
+
+  font-family: "Playfair Display", serif;
 }
 
-.saree-content p{
+/* ==========================
+   WHATSAPP BUTTON
+========================== */
 
-  color:
-  rgba(255,255,255,0.72);
+.whatsapp-btn {
 
-  line-height: 1.9;
+  display: flex;
 
-  margin-bottom: 30px;
-}
+  align-items: center;
 
-/* ===== BUTTON ===== */
+  justify-content: center;
 
-.saree-content a{
+  gap: 10px;
 
-  display: inline-block;
+  width: 100%;
+
+  padding: 14px;
+
+  border-radius: 50px;
 
   text-decoration: none;
 
-  padding: 14px 28px;
-
-  border-radius: 40px;
-
-  background:
-  linear-gradient(
-    135deg,
-    #25D366,
-    #128C7E
-  );
+  background: #48020c;
 
   color: white;
 
-  transition: 0.4s ease;
+  font-weight: 600;
+
+  transition: .3s ease;
 }
 
-.saree-content a:hover{
+.whatsapp-btn:hover {
 
-  transform:
-  translateY(-4px);
+  background: #6d0b1b;
+
+  transform: translateY(-2px);
 }
 
-/* ===== MOBILE ===== */
+/* ==========================
+   NOT FOUND
+========================== */
 
-@media(max-width:700px){
+.not-found {
 
-  .collection-details{
+  min-height: 100vh;
 
-    padding:
-    120px 6% 80px;
-  }
+  display: flex;
 
-  .details-header h1{
+  justify-content: center;
 
-    font-size: 2.8rem;
-  }
+  align-items: center;
 
-  .saree-image-wrapper img{
+  background: #f4f1ea;
 
-    height: 420px;
-  }
+  color: #48020c;
 
-  .royal-border{
+  font-size: 2rem;
 
-    width: 60px;
-
-    opacity: 0.06;
-  }
-
-  /* =========================
-   MOBILE BORDER OPTIMIZATION
-========================= */
-
-@media(max-width:700px){
-
-  .royal-border{
-
-    width: 79.5px;
-
-    opacity: 0.85;
-
-    background-size: cover;
-
-    filter:
-    brightness(1.35)
-    contrast(1.15)
-    saturate(1.15)
-    drop-shadow(
-      0 0 8px rgba(212,175,109,0.22)
-    );
-
-  }
-
+  font-weight: 600;
 }
 
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 1024px) {
+
+  .collection-details {
+
+    grid-template-columns: 65px 1fr 65px;
+  }
+
+  .saree-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .details-header h1 {
+
+    font-size: 3rem;
+  }
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+
+  .collection-details {
+
+    grid-template-columns: 1fr;
+
+    padding: 90px 15px 60px;
+  }
+
+  .side-frame {
+
+    width: 100%;
+  }
+
+  .side-frame img {
+
+    width: 100%;
+
+    height: 40px;
+
+    object-fit: cover;
+  }
+
+  .details-header {
+
+    margin-bottom: 40px;
+  }
+
+  .details-header h1 {
+
+    font-size: 2.5rem;
+  }
+
+  .saree-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+  }
+
+  .saree-image img {
+
+    height: 240px;
+  }
+
+  .saree-info {
+
+    padding: 14px;
+  }
+
+  .saree-info h3 {
+
+    font-size: 0.95rem;
+  }
+
+  .whatsapp-btn {
+
+    font-size: 0.85rem;
+
+    padding: 12px;
+  }
 }

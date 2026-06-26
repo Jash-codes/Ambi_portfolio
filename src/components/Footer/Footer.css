@@ -1,617 +1,580 @@
-/* =========================
+/* ==========================================
    FOOTER
-========================= */
+========================================== */
 
 .footer{
 
-  background:
-  linear-gradient(
-    180deg,
-    #120907,
-    #090404
-  );
+    position:relative;
 
-  overflow: hidden;
+    background:#f4f1ea;
+
+    padding:70px 6% 35px;
+
+    overflow:hidden;
+
 }
 
-/* =========================
-   CONTAINER
-========================= */
-
-.footer-container{
-
-  display: grid;
-
-  grid-template-columns:
-  1fr 1fr;
-
-  min-height: 760px;
-}
-
-/* =========================
-   LEFT SIDE
-========================= */
-
-.footer-left{
-
-  position: relative;
-
-  background:
-  linear-gradient(
-    180deg,
-    #25D366,
-    #075E54
-  );
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 90px;
-
-  overflow: hidden;
-}
-
-/* =========================
-   ROYAL FRAME
-========================= */
-
-/* =========================
-   ROYAL GOLD FRAME
-========================= */
+/* ==========================================
+   FRAME
+========================================== */
 
 .footer-frame{
 
-  position: absolute;
+    position:absolute;
 
-  inset: 22px;
+    inset:25px;
 
-  width: calc(100% - 44px);
+    width:calc(100% - 50px);
 
-  height: calc(100% - 44px);
+    height:calc(100% - 50px);
 
-  object-fit: fill;
+    object-fit:fill;
 
-  pointer-events: none;
+    pointer-events:none;
 
-  z-index: 1;
+    opacity:.95;
 
-  opacity: 0.88;
-
-  mix-blend-mode: screen;
-
-  filter:
-  brightness(2.2)
-  contrast(1.45)
-  saturate(1.8)
-  sepia(0.35)
-  hue-rotate(8deg)
-  drop-shadow(
-    0 0 12px rgba(255,215,120,0.55)
-  )
-  drop-shadow(
-    0 0 30px rgba(212,175,109,0.45)
-  )
-  drop-shadow(
-    0 0 55px rgba(255,223,140,0.28)
-  );
-
-  animation:
-  royalGlow 4s ease-in-out infinite;
 }
 
-/* =========================
-   GOLD SHIMMER
-========================= */
+/* ==========================================
+   CONTAINER
+========================================== */
 
-@keyframes royalGlow{
+.footer-container{
 
-  0%{
+    position:relative;
 
-    filter:
-    brightness(2)
-    contrast(1.4)
-    saturate(1.7)
-    sepia(0.35)
-    hue-rotate(8deg)
-    drop-shadow(
-      0 0 10px rgba(255,215,120,0.45)
-    )
-    drop-shadow(
-      0 0 25px rgba(212,175,109,0.35)
+    z-index:5;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.footer-logo-section{
+
+    text-align:center;
+
+    margin-bottom:55px;
+
+}
+
+.footer-logo{
+
+    width:130px;
+
+    margin-bottom:18px;
+
+    transition:.35s;
+
+}
+
+.footer-logo:hover{
+
+    transform:scale(1.05);
+
+}
+
+.footer-logo-section h2{
+
+    color:#48020c;
+
+    font-size:3rem;
+
+    font-family:"Playfair Display",serif;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   INFO GRID
+========================================== */
+
+.footer-info{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+    margin-bottom:55px;
+
+}
+
+/* ==========================================
+   INFO BOX
+========================================== */
+
+.info-box{
+
+    background:#fffdf9;
+
+    border:1px solid #e6dbc9;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+    transition:.35s;
+
+}
+
+.info-box:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#e7ca90;
+
+    box-shadow:
+    0 18px 35px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   ICON
+========================================== */
+
+.info-box svg{
+
+    font-size:1.5rem;
+
+    color:#c59d52;
+
+    min-width:28px;
+
+    margin-top:4px;
+
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.info-box h4{
+
+    color:#48020c;
+
+    margin-bottom:8px;
+
+    font-size:1.05rem;
+
+    font-weight:700;
+
+}
+
+.info-box p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:.92rem;
+
+}
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.footer-divider{
+
+    width:180px;
+
+    height:2px;
+
+    background:
+    linear-gradient(
+        to right,
+        transparent,
+        #e7ca90,
+        transparent
     );
-  }
 
-  50%{
-
-    filter:
-    brightness(2.5)
-    contrast(1.55)
-    saturate(2)
-    sepia(0.4)
-    hue-rotate(10deg)
-    drop-shadow(
-      0 0 18px rgba(255,223,140,0.8)
-    )
-    drop-shadow(
-      0 0 45px rgba(212,175,109,0.6)
-    );
-  }
-
-  100%{
-
-    filter:
-    brightness(2)
-    contrast(1.4)
-    saturate(1.7)
-    sepia(0.35)
-    hue-rotate(8deg)
-    drop-shadow(
-      0 0 10px rgba(255,215,120,0.45)
-    )
-    drop-shadow(
-      0 0 25px rgba(212,175,109,0.35)
-    );
-  }
+    margin:10px auto 40px;
 
 }
 
-/* GLOW */
-
-.footer-left-glow{
-
-  position: absolute;
-
-  width: 600px;
-  height: 600px;
-
-  border-radius: 50%;
-
-  background:
-  radial-gradient(
-    circle,
-    rgba(255,255,255,0.16),
-    transparent
-  );
-
-  top: -180px;
-  right: -120px;
-
-  filter: blur(80px);
-}
-
-/* CONTENT */
-
-.footer-left-content{
-
-  position: relative;
-  z-index: 2;
-
-  max-width: 440px;
-
-  color: white;
-}
-
-/* SMALL TEXT */
-
-.footer-small-text{
-
-  letter-spacing: 5px;
-
-  text-transform: uppercase;
-
-  margin-bottom: 20px;
-
-  opacity: 0.85;
-}
-
-/* TITLE */
-
-.footer-left h2{
-
-  font-size: 4.5rem;
-
-  line-height: 1.05;
-
-  margin-bottom: 30px;
-}
-
-/* DESCRIPTION */
-
-.footer-left span{
-
-  display: block;
-
-  line-height: 2;
-
-  font-size: 1.05rem;
-
-  margin-bottom: 50px;
-
-  opacity: 0.92;
-}
-
-/* BUTTON */
-
-.footer-whatsapp-btn{
-
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 14px;
-
-  text-decoration: none;
-
-  background: white;
-
-  color: #128C7E;
-
-  padding: 18px 38px;
-
-  border-radius: 60px;
-
-  font-weight: 700;
-
-  transition: 0.4s ease;
-}
-
-.footer-whatsapp-btn:hover{
-
-  transform:
-  translateY(-5px);
-
-  box-shadow:
-  0 15px 35px rgba(0,0,0,0.18);
-}
-
-/* SOCIALS */
-
-.footer-socials{
-
-  display: flex;
-
-  gap: 18px;
-
-  margin-top: 40px;
-}
-
-/* SOCIAL BUTTON */
-
-.footer-socials a{
-
-  width: 55px;
-  height: 55px;
-
-  border-radius: 50%;
-
-  background:
-  rgba(255,255,255,0.12);
-
-  border:
-  1px solid rgba(255,255,255,0.2);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: white;
-
-  font-size: 1.2rem;
-
-  transition: 0.4s ease;
-
-  backdrop-filter: blur(10px);
-}
-
-.footer-socials a:hover{
-
-  background: white;
-
-  color: #128C7E;
-
-  transform:
-  translateY(-5px);
-}
-
-/* =========================
-   RIGHT SIDE
-========================= */
-
-.footer-right{
-
-  background:
-  linear-gradient(
-    180deg,
-    #120907,
-    #090404
-  );
-
-  padding:
-  90px 8%;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  position: relative;
-}
-
-/* GOLD LINE */
-
-.footer-gold-line{
-
-  width: 160px;
-  height: 2px;
-
-  background:
-  linear-gradient(
-    90deg,
-    transparent,
-    var(--metallic-gold),
-    transparent
-  );
-
-  margin-bottom: 45px;
-}
-
-/* BRAND */
-
-.footer-brand{
-
-  display: flex;
-  align-items: center;
-
-  gap: 30px;
-
-  margin-bottom: 70px;
-}
-
-/* LOGO */
-
-.footer-brand img{
-
-  width: 120px;
-
-  filter:
-  drop-shadow(
-    0 0 20px rgba(200,169,107,0.2)
-  );
-}
-
-/* TITLE */
-
-.footer-brand h2{
-
-  color: white;
-
-  font-size: 2.8rem;
-
-  margin-bottom: 12px;
-}
-
-/* DESC */
-
-.footer-brand p{
-
-  color:
-  rgba(255,255,255,0.72);
-
-  line-height: 1.9;
-}
-
-/* DETAILS */
-
-.footer-details{
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 38px;
-
-  margin-bottom: 65px;
-}
-
-/* ITEM */
-
-.footer-item{
-
-  display: flex;
-
-  gap: 22px;
-}
-
-/* ICON BOX */
-
-.footer-icon{
-
-  width: 52px;
-  height: 52px;
-
-  border-radius: 50%;
-
-  background:
-  rgba(200,169,107,0.08);
-
-  border:
-  1px solid rgba(200,169,107,0.2);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  color: var(--metallic-gold);
-
-  flex-shrink: 0;
-}
-
-/* TEXT */
-
-.footer-item h4{
-
-  color: white;
-
-  margin-bottom: 10px;
-
-  font-size: 1.1rem;
-}
-
-.footer-item p{
-
-  color:
-  rgba(255,255,255,0.72);
-
-  line-height: 1.8;
-}
-
-/* LINKS */
+/* ==========================================
+   NAVIGATION
+========================================== */
 
 .footer-links{
 
-  display: flex;
+    display:flex;
 
-  gap: 35px;
+    justify-content:center;
 
-  flex-wrap: wrap;
+    align-items:center;
 
-  margin-bottom: 45px;
+    flex-wrap:wrap;
+
+    gap:35px;
+
+    margin-bottom:35px;
+
 }
-
-/* LINK */
 
 .footer-links a{
 
-  text-decoration: none;
+    text-decoration:none;
 
-  color: white;
+    color:#48020c;
 
-  position: relative;
+    font-size:1rem;
 
-  transition: 0.4s ease;
+    font-weight:600;
+
+    position:relative;
+
+    transition:.3s ease;
+
 }
 
 .footer-links a::after{
 
-  content:"";
+    content:"";
 
-  position: absolute;
+    position:absolute;
 
-  left: 0;
-  bottom: -8px;
+    left:0;
+    bottom:-5px;
 
-  width: 0;
-  height: 1px;
+    width:0;
 
-  background: var(--metallic-gold);
+    height:2px;
 
-  transition: 0.4s ease;
+    background:#e7ca90;
+
+    transition:.3s ease;
+
 }
 
 .footer-links a:hover{
 
-  color: var(--metallic-gold);
+    color:#a58b7a;
+
 }
 
 .footer-links a:hover::after{
 
-  width: 100%;
+    width:100%;
+
 }
 
-/* COPYRIGHT */
+/* ==========================================
+   SOCIAL ICONS
+========================================== */
+
+.footer-social{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}
+
+.footer-social a{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    background:#fff;
+
+    color:#48020c;
+
+    font-size:1.15rem;
+
+    border:1px solid #e6dbc9;
+
+    transition:.35s ease;
+
+}
+
+.footer-social a:hover{
+
+    background:#e7ca90;
+
+    color:#48020c;
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+}
+
+/* ==========================================
+   COPYRIGHT
+========================================== */
 
 .footer-bottom{
 
-  padding-top: 30px;
+    width:100%;
 
-  border-top:
-  1px solid rgba(255,255,255,0.08);
+    text-align:center;
+
+    border-top:1px solid #d8cbb9;
+
+    padding-top:22px;
+
+    color:#6b5b52;
+
+    font-size:.9rem;
+
 }
 
-.footer-bottom span{
-
-  color:
-  rgba(255,255,255,0.45);
-
-  font-size: 0.95rem;
-}
-
-/* =========================
+/* ==========================================
    TABLET
-========================= */
+========================================== */
 
-@media(max-width:1000px){
+@media(max-width:992px){
 
-  .footer-container{
+    .footer{
 
-    grid-template-columns: 1fr;
-  }
+        padding:60px 5% 30px;
 
-  .footer-left{
+    }
 
-    min-height: 500px;
-  }
+    .footer-frame{
+
+        inset:18px;
+
+        width:calc(100% - 36px);
+
+        height:calc(100% - 36px);
+
+    }
+
+    .footer-logo{
+
+        width:110px;
+
+    }
+
+    .footer-logo-section h2{
+
+        font-size:2.5rem;
+
+    }
+
+    .footer-info{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:20px;
+
+    }
 
 }
 
-/* =========================
+/* ==========================================
    MOBILE
-========================= */
+========================================== */
 
-@media(max-width:700px){
+@media(max-width:768px){
 
-  .footer-left,
-  .footer-right{
+    .footer{
 
-    padding: 70px 6%;
-  }
+        padding:45px 20px 25px;
 
-  /* TITLE */
+    }
 
-  .footer-left h2{
+    .footer-frame{
 
-    font-size: 3rem;
-  }
+        inset:10px;
 
-  /* BRAND */
+        width:calc(100% - 20px);
 
-  .footer-brand{
+        height:calc(100% - 20px);
 
-    flex-direction: column;
+        object-fit:fill;
 
-    align-items: flex-start;
+    }
 
-    gap: 20px;
-  }
+    .footer-logo-section{
 
-  .footer-brand img{
+        margin-bottom:40px;
 
-    width: 90px;
-  }
+    }
 
-  .footer-brand h2{
+    .footer-logo{
 
-    font-size: 2rem;
-  }
+        width:90px;
 
-  /* LINKS */
+    }
 
-  .footer-links{
+    .footer-logo-section h2{
 
-    gap: 20px;
-  }
+        font-size:2rem;
 
-  .footer-frame{
+    }
 
-  inset: 14px;
+    .footer-info{
 
-  width: calc(100% - 28px);
+        grid-template-columns:1fr;
 
-  height: calc(100% - 28px);
+        gap:18px;
 
-  opacity: 0.72;
+        margin-bottom:35px;
+
+    }
+
+    .info-box{
+
+        padding:20px;
+
+    }
+
+    .footer-links{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        margin-bottom:30px;
+
+    }
+
+    .footer-social{
+
+        gap:15px;
+
+        margin-bottom:30px;
+
+    }
+
+    .footer-social a{
+
+        width:45px;
+
+        height:45px;
+
+    }
+
 }
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media(max-width:480px){
+
+    .footer{
+
+        padding:35px 15px 20px;
+
+    }
+
+    .footer-frame{
+
+        inset:8px;
+
+        width:calc(100% - 16px);
+
+        height:calc(100% - 16px);
+
+    }
+
+    .footer-logo{
+
+        width:75px;
+
+    }
+
+    .footer-logo-section h2{
+
+        font-size:1.7rem;
+
+    }
+
+    .info-box{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+    .info-box svg{
+
+        margin:0;
+
+        font-size:1.4rem;
+
+    }
+
+    .footer-bottom{
+
+        font-size:.8rem;
+
+        line-height:1.8;
+
+    }
+
+}
+
+/* ==========================================
+   LARGE DESKTOP
+========================================== */
+
+@media(min-width:1600px){
+
+    .footer-container{
+
+        max-width:1400px;
+
+    }
+
+}
+
+/* ==========================================
+   SMOOTH EFFECTS
+========================================== */
+
+.footer-logo,
+.info-box,
+.footer-social a,
+.footer-links a{
+
+    transition:all .35s ease;
 
 }

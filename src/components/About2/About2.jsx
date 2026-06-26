@@ -4,7 +4,7 @@ function About2() {
   return (
     <section className="about2-section">
 
-      <div className="about2-container">
+      <div className="about2-container" id="about2">
 
         {/* LEFT SIDE */}
 
