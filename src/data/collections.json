@@ -1,0 +1,175 @@
+{
+  "sunkissed": {
+    "title": "Sunkissed",
+    "subtitle": "Golden elegance woven with timeless craftsmanship.",
+    "sarees": [
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 1,
+        "name": "Sunkissed Saree 01",
+        "price": "₹12,999",
+        "image": "/saree1.png",
+        "desc": "Rich golden tones with intricate motifs."
+      },
+      {
+        "id": 2,
+        "name": "Sunkissed Saree 02",
+        "price": "₹13,499",
+        "image": "/saree1.png",
+        "desc": "Luxurious silk with delicate zari work."
+      }
+    ]
+  },
+  "cloudburst": {
+    "title": "Cloudburst",
+    "subtitle": "Dreamy textures inspired by luminous skies and heritage artistry.",
+    "sarees": [
+      {
+        "id": 1,
+        "name": "Cloudburst Saree 01",
+        "price": "₹13,999",
+        "image": "/cloud1.jpg",
+        "desc": "Soft pastel tones with ethereal patterns."
+      }
+    ]
+  }
+}
