@@ -1,580 +1,166 @@
-/* ==========================================
-   FOOTER
-========================================== */
-
-.footer{
-
-    position:relative;
-
-    background:#f4f1ea;
-
-    padding:70px 6% 35px;
-
-    overflow:hidden;
-
+.footer {
+  position: relative;
+  background: linear-gradient(rgba(72, 2, 12, 0.95), rgba(30, 2, 8, 0.98)), #48020c;
+  padding: 70px 5% 40px;
+  color: #e8d9c0;
+  overflow: hidden;
 }
 
-/* ==========================================
-   FRAME
-========================================== */
-
-.footer-frame{
-
-    position:absolute;
-
-    inset:25px;
-
-    width:calc(100% - 50px);
-
-    height:calc(100% - 50px);
-
-    object-fit:fill;
-
-    pointer-events:none;
-
-    opacity:.95;
-
+/* Ambi Logo Watermark */
+.footer-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.12;
+  z-index: 1;
+  pointer-events: none;
 }
 
-/* ==========================================
-   CONTAINER
-========================================== */
-
-.footer-container{
-
-    position:relative;
-
-    z-index:5;
-
-    max-width:1200px;
-
-    margin:auto;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
+.watermark-logo {
+  width: 420px;
+  filter: brightness(1.6) sepia(1) hue-rotate(20deg) saturate(2.8);
 }
 
-/* ==========================================
-   LOGO
-========================================== */
-
-.footer-logo-section{
-
-    text-align:center;
-
-    margin-bottom:55px;
-
+/* Main Content */
+.footer-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-.footer-logo{
-
-    width:130px;
-
-    margin-bottom:18px;
-
-    transition:.35s;
-
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 50px;
+  margin-bottom: 50px;
 }
 
-.footer-logo:hover{
-
-    transform:scale(1.05);
-
+.footer-column h3 {
+  color: #e7ca90;
+  margin-bottom: 22px;
+  font-size: 1.35rem;
+  border-bottom: 2px solid #e7ca90;
+  padding-bottom: 8px;
+  display: inline-block;
 }
 
-.footer-logo-section h2{
-
-    color:#48020c;
-
-    font-size:3rem;
-
-    font-family:"Playfair Display",serif;
-
-    font-weight:600;
-
+/* Contact Info */
+.contact-info .info-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+  align-items:center;
 }
 
-/* ==========================================
-   INFO GRID
-========================================== */
-
-.footer-info{
-
-    width:100%;
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:22px;
-
-    margin-bottom:55px;
-
+.contact-info .info-item svg {
+  margin-top: 4px;
+  color: #e7ca90;
+  font-size: 1.5rem;
 }
 
-/* ==========================================
-   INFO BOX
-========================================== */
-
-.info-box{
-
-    background:#fffdf9;
-
-    border:1px solid #e6dbc9;
-
-    border-radius:18px;
-
-    padding:25px;
-
-    display:flex;
-
-    gap:18px;
-
-    align-items:flex-start;
-
-    transition:.35s;
-
+/* Quick Menu */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
 }
 
-.info-box:hover{
-
-    transform:translateY(-5px);
-
-    border-color:#e7ca90;
-
-    box-shadow:
-    0 18px 35px rgba(0,0,0,.08);
-
+.footer-column ul li {
+  margin-bottom: 10px;
 }
 
-/* ==========================================
-   ICON
-========================================== */
-
-.info-box svg{
-
-    font-size:1.5rem;
-
-    color:#c59d52;
-
-    min-width:28px;
-
-    margin-top:4px;
-
+.footer-column ul a {
+  color: #e8d9c0;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-/* ==========================================
-   TEXT
-========================================== */
-
-.info-box h4{
-
-    color:#48020c;
-
-    margin-bottom:8px;
-
-    font-size:1.05rem;
-
-    font-weight:700;
-
+.footer-column ul a:hover {
+  color: #e7ca90;
 }
 
-.info-box p{
-
-    color:#666;
-
-    line-height:1.8;
-
-    font-size:.92rem;
-
+/* Map */
+.map-column iframe {
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
-/* ==========================================
-   DIVIDER
-========================================== */
-
-.footer-divider{
-
-    width:180px;
-
-    height:2px;
-
-    background:
-    linear-gradient(
-        to right,
-        transparent,
-        #e7ca90,
-        transparent
-    );
-
-    margin:10px auto 40px;
-
+/* WhatsApp Button
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25D366;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  text-decoration: none;
+  z-index: 100;
+  transition: transform 0.3s;
 }
 
-/* ==========================================
-   NAVIGATION
-========================================== */
+.whatsapp-float:hover {
+  transform: scale(1.08);
+} */
 
-.footer-links{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    flex-wrap:wrap;
-
-    gap:35px;
-
-    margin-bottom:35px;
-
+/* Copyright */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #6b3d3d;
+  padding-top: 25px;
+  margin-top: 20px;
+  font-size: 0.92rem;
+  color: #c8a080;
 }
 
-.footer-links a{
-
-    text-decoration:none;
-
-    color:#48020c;
-
-    font-size:1rem;
-
-    font-weight:600;
-
-    position:relative;
-
-    transition:.3s ease;
-
+.designed {
+  font-style: italic;
+  margin-top: 6px;
+  opacity: 0.8;
 }
 
-.footer-links a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    bottom:-5px;
-
-    width:0;
-
-    height:2px;
-
-    background:#e7ca90;
-
-    transition:.3s ease;
-
+/* Mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 5% 50px;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .watermark-logo {
+    width: 280px;
+  }
 }
 
-.footer-links a:hover{
-
-    color:#a58b7a;
-
+/* Shipping Styles */
+.shipping-info {
+  background: rgba(231, 202, 144, 0.12);
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(231, 202, 144, 0.3);
 }
 
-.footer-links a:hover::after{
-
-    width:100%;
-
+.shipping-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
 }
 
-/* ==========================================
-   SOCIAL ICONS
-========================================== */
-
-.footer-social{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:18px;
-
-    margin-bottom:35px;
-
+.shipping-item svg {
+  font-size: 1.6rem;
+  color: #e7ca90;
+  margin-top: 3px;
 }
 
-.footer-social a{
-
-    width:48px;
-
-    height:48px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-decoration:none;
-
-    background:#fff;
-
-    color:#48020c;
-
-    font-size:1.15rem;
-
-    border:1px solid #e6dbc9;
-
-    transition:.35s ease;
-
-}
-
-.footer-social a:hover{
-
-    background:#e7ca90;
-
-    color:#48020c;
-
-    transform:translateY(-4px);
-
-    box-shadow:0 12px 25px rgba(0,0,0,.08);
-
-}
-
-/* ==========================================
-   COPYRIGHT
-========================================== */
-
-.footer-bottom{
-
-    width:100%;
-
-    text-align:center;
-
-    border-top:1px solid #d8cbb9;
-
-    padding-top:22px;
-
-    color:#6b5b52;
-
-    font-size:.9rem;
-
-}
-
-/* ==========================================
-   TABLET
-========================================== */
-
-@media(max-width:992px){
-
-    .footer{
-
-        padding:60px 5% 30px;
-
-    }
-
-    .footer-frame{
-
-        inset:18px;
-
-        width:calc(100% - 36px);
-
-        height:calc(100% - 36px);
-
-    }
-
-    .footer-logo{
-
-        width:110px;
-
-    }
-
-    .footer-logo-section h2{
-
-        font-size:2.5rem;
-
-    }
-
-    .footer-info{
-
-        grid-template-columns:repeat(2,1fr);
-
-        gap:20px;
-
-    }
-
-}
-
-/* ==========================================
-   MOBILE
-========================================== */
-
-@media(max-width:768px){
-
-    .footer{
-
-        padding:45px 20px 25px;
-
-    }
-
-    .footer-frame{
-
-        inset:10px;
-
-        width:calc(100% - 20px);
-
-        height:calc(100% - 20px);
-
-        object-fit:fill;
-
-    }
-
-    .footer-logo-section{
-
-        margin-bottom:40px;
-
-    }
-
-    .footer-logo{
-
-        width:90px;
-
-    }
-
-    .footer-logo-section h2{
-
-        font-size:2rem;
-
-    }
-
-    .footer-info{
-
-        grid-template-columns:1fr;
-
-        gap:18px;
-
-        margin-bottom:35px;
-
-    }
-
-    .info-box{
-
-        padding:20px;
-
-    }
-
-    .footer-links{
-
-        flex-direction:column;
-
-        gap:15px;
-
-        margin-bottom:30px;
-
-    }
-
-    .footer-social{
-
-        gap:15px;
-
-        margin-bottom:30px;
-
-    }
-
-    .footer-social a{
-
-        width:45px;
-
-        height:45px;
-
-    }
-
-}
-
-/* ==========================================
-   SMALL PHONES
-========================================== */
-
-@media(max-width:480px){
-
-    .footer{
-
-        padding:35px 15px 20px;
-
-    }
-
-    .footer-frame{
-
-        inset:8px;
-
-        width:calc(100% - 16px);
-
-        height:calc(100% - 16px);
-
-    }
-
-    .footer-logo{
-
-        width:75px;
-
-    }
-
-    .footer-logo-section h2{
-
-        font-size:1.7rem;
-
-    }
-
-    .info-box{
-
-        flex-direction:column;
-
-        align-items:center;
-
-        text-align:center;
-
-    }
-
-    .info-box svg{
-
-        margin:0;
-
-        font-size:1.4rem;
-
-    }
-
-    .footer-bottom{
-
-        font-size:.8rem;
-
-        line-height:1.8;
-
-    }
-
-}
-
-/* ==========================================
-   LARGE DESKTOP
-========================================== */
-
-@media(min-width:1600px){
-
-    .footer-container{
-
-        max-width:1400px;
-
-    }
-
-}
-
-/* ==========================================
-   SMOOTH EFFECTS
-========================================== */
-
-.footer-logo,
-.info-box,
-.footer-social a,
-.footer-links a{
-
-    transition:all .35s ease;
-
+.shipping-item strong {
+  display: block;
+  color: #e7ca90;
+  margin-bottom: 6px;
 }

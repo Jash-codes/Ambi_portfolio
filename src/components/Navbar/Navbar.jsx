@@ -73,8 +73,7 @@ function Navbar() {
             <Link
               to="/"
               className="back-home-btn"
-            >
-              ← Back
+            >← Back
             </Link>
 
           )}
@@ -83,7 +82,7 @@ function Navbar() {
             href="https://wa.me/919999999999"
             target="_blank"
             rel="noreferrer"
-            className="whatsapp-btn"
+            className="navbar-whatsapp-btn"
           >
             <FaWhatsapp />
             WhatsApp
