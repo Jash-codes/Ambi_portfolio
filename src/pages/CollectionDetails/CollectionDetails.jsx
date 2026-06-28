@@ -2,12 +2,13 @@ import "./CollectionDetails.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import { FaWhatsapp, FaTimes } from "react-icons/fa";
+import { FaWhatsapp, FaTimes, FaEye } from "react-icons/fa";
 import collectionsData from "../../data/collections.json";
 
 function CollectionDetails() {
   const { id } = useParams();
   const [selectedSaree, setSelectedSaree] = useState(null);
+  const [showZoom, setShowZoom] = useState(false);
   const [collection, setCollection] = useState(null);
 
   useEffect(() => {
@@ -49,7 +50,7 @@ function CollectionDetails() {
                 <div className="saree-info">
                   <h3>{saree.name}</h3>
                   <p className="price">{saree.price}</p>
-                  <button className="view-btn">Quick View</button>
+                  <button className="view-btn">View Saree Detils</button>
                 </div>
               </div>
             ))}
@@ -60,7 +61,7 @@ function CollectionDetails() {
         <div className="side-frame right" />
       </section>
 
-      {/* Popup Modal */}
+      {/* Main Popup */}
       {selectedSaree && (
         <div className="modal-overlay" onClick={() => setSelectedSaree(null)}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
@@ -70,6 +71,9 @@ function CollectionDetails() {
 
             <div className="modal-image">
               <img src={selectedSaree.image} alt={selectedSaree.name} />
+              <button className="zoom-btn" onClick={() => setShowZoom(true)}>
+                <FaEye /> Zoom Image
+              </button>
             </div>
 
             <div className="modal-info">
@@ -86,6 +90,18 @@ function CollectionDetails() {
                 <FaWhatsapp /> Inquire on WhatsApp
               </a>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Full Zoom Modal */}
+      {showZoom && selectedSaree && (
+        <div className="zoom-modal" onClick={() => setShowZoom(false)}>
+          <div className="zoom-content" onClick={e => e.stopPropagation()}>
+            <button className="zoom-close" onClick={() => setShowZoom(false)}>
+              <FaTimes />
+            </button>
+            <img src={selectedSaree.image} alt={selectedSaree.name} className="zoom-img" />
           </div>
         </div>
       )}

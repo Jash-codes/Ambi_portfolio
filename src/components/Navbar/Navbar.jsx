@@ -73,7 +73,7 @@ function Navbar() {
             <Link
               to="/"
               className="back-home-btn"
-            >← Back
+            >← Back to Home
             </Link>
 
           )}

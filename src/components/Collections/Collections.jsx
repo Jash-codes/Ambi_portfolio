@@ -66,7 +66,7 @@ function Collections() {
 
             <span style={{ background: "#F0E7D7" }}></span>
 
-            <span style={{ background: "#D08B72" }}></span>
+            <span style={{ background: "#D08B72" }}></span><br></br>
 
             <span style={{ background: "#A6533B" }}></span>
 
