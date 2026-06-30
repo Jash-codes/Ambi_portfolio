@@ -14,7 +14,7 @@
         "id": 1,
         "name": "Sunkissed Saree 01",
         "price": "₹12,999",
-        "image": "/saree1.png",
+        "image": "/saree2.jpg",
         "desc": "Rich golden tones with intricate motifs."
       },
       {
@@ -27,8 +27,8 @@
       {
         "id": 1,
         "name": "Sunkissed Saree 01",
-        "price": "₹12,999",
-        "image": "/saree1.png",
+        "price": "₹45,000",
+        "image": "/saree2.jpg",
         "desc": "Rich golden tones with intricate motifs."
       },
       {
@@ -41,8 +41,8 @@
       {
         "id": 1,
         "name": "Sunkissed Saree 01",
-        "price": "₹12,999",
-        "image": "/saree1.png",
+        "price": "₹45,000",
+        "image": "/saree2.jpg",
         "desc": "Rich golden tones with intricate motifs."
       },
       {
@@ -55,8 +55,8 @@
       {
         "id": 1,
         "name": "Sunkissed Saree 01",
-        "price": "₹12,999",
-        "image": "/saree1.png",
+        "price": "₹45,000",
+        "image": "/saree2.jpg",
         "desc": "Rich golden tones with intricate motifs."
       },
       {
@@ -69,17 +69,11 @@
       {
         "id": 1,
         "name": "Sunkissed Saree 01",
-        "price": "₹12,999",
-        "image": "/saree1.png",
-        "desc": "Rich golden tones with intricate motifs."
-      },
-      {
-        "id": 1,
-        "name": "Sunkissed Saree 01",
-        "price": "₹12,999",
-        "image": "/saree1.png",
+        "price": "₹45,000",
+        "image": "/saree2.jpg",
         "desc": "Rich golden tones with intricate motifs."
       }
+      
     ]
   },
   "cloudburst": {
